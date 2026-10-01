@@ -1,0 +1,213 @@
+{
+  "tituloPagina": "Mis quince años · Marian",
+  "idioma": "es-MX",
+  "zonaHoraria": "America/Mexico_City",
+  "invitado": {
+    "id": null,
+    "nombre": "",
+    "contacto": "",
+    "pases": null,
+    "respuesta": {
+      "asistencia": "pendiente",
+      "adultos": 0,
+      "ninos": 0,
+      "mensaje": ""
+    }
+  },
+  "portada": {
+    "introduccion": "Estás invitado a celebrar conmigo",
+    "titulo": "Mis quince años",
+    "protagonista": "Marian"
+  },
+  "mensaje": {
+    "titulo": "Mis quince años",
+    "texto": ""
+  },
+  "familia": {
+    "titulo": "",
+    "grupos": []
+  },
+  "evento": {
+    "inicio": null,
+    "fin": null,
+    "titulo": "Mis quince años · Marian",
+    "descripcion": "",
+    "lugar": "Santa Iglesia Catedral Teziutlán",
+    "mensajeFinalContador": "La fecha del evento ha llegado.",
+    "dia": 26,
+    "mes": "Diciembre",
+    "diaSemana": "Sábado",
+    "anio": null
+  },
+  "ubicaciones": [
+    {
+      "titulo": "Ceremonia religiosa",
+      "nombre": "Santa Iglesia Catedral Teziutlán",
+      "direccion": "",
+      "hora": "18:00",
+      "mapaUrl": "https://maps.app.goo.gl/rNKbdZCgygEtRpni8",
+      "imagen": "catedral-teziutlan.png",
+      "descripcion": ""
+    },
+    {
+      "titulo": "Recepción",
+      "nombre": "Centro de Convenciones",
+      "direccion": "",
+      "hora": null,
+      "mapaUrl": "https://maps.app.goo.gl/hVikkhAvacAYZX6H9",
+      "imagen": "centro-convenciones.jpg",
+      "descripcion": "Después de la ceremonia religiosa, los esperamos en"
+    }
+  ],
+  "itinerario": [],
+  "confirmacion": {
+    "mensaje": "Esperamos contar con tu presencia en este día tan especial para mí.",
+    "modo": "demostracion",
+    "destino": null
+  },
+  "notas": {
+    "titulo": "",
+    "texto": ""
+  },
+  "vestimenta": {
+    "titulo": "Código de vestimenta",
+    "tipo": "Formal",
+    "nota": "Colores reservados para la festejada",
+    "colores": [
+      {
+        "nombre": "Fucsia",
+        "valor": "#D226C6"
+      },
+      {
+        "nombre": "Dorado",
+        "valor": "#DBAF47"
+      },
+      {
+        "nombre": "Blanco",
+        "valor": "#FFFFFF"
+      }
+    ]
+  },
+  "regalos": {
+    "titulo": "Lluvia de sobres",
+    "texto": "Tu presencia es lo más importante para compartir y disfrutar, pero si deseas tener un detalle, agradecería que fuera en efectivo."
+  },
+  "hospedaje": [
+    {
+      "nombre": "Hotel Blue city",
+      "mapaUrl": "https://maps.app.goo.gl/fhqYUdDgf3K7RZeG6"
+    },
+    {
+      "nombre": "Hotel Danini",
+      "mapaUrl": "https://maps.app.goo.gl/9G1BNrn88nbVLxUc7"
+    },
+    {
+      "nombre": "Hotel Central",
+      "mapaUrl": "https://maps.app.goo.gl/fB6YG1opVFdtbMQ2A"
+    }
+  ],
+  "reproduccion": {
+    "width": 1024.5,
+    "height": 10637.25,
+    "imagen": "assets/fiel/invitacion.svg",
+    "contador": "referencia-estatica",
+    "campos": [
+      {
+        "id": "nombre",
+        "rect": [
+          255.879,
+          9449.398,
+          805.768,
+          9511.261
+        ]
+      },
+      {
+        "id": "asistencia-si",
+        "rect": [
+          255.307,
+          9611.501,
+          806.341,
+          9679.092
+        ]
+      },
+      {
+        "id": "asistencia-no",
+        "rect": [
+          255.307,
+          9691.693,
+          806.341,
+          9760.429
+        ]
+      },
+      {
+        "id": "adultos",
+        "rect": [
+          255.879,
+          9859.523,
+          805.768,
+          9922.531
+        ]
+      },
+      {
+        "id": "ninos",
+        "rect": [
+          255.879,
+          10022.199,
+          805.768,
+          10085.207
+        ]
+      },
+      {
+        "id": "enviar",
+        "rect": [
+          255.307,
+          10110.983,
+          806.341,
+          10184.302
+        ]
+      }
+    ],
+    "mapas": [
+      {
+        "nombre": "Santa Iglesia Catedral Teziutlán",
+        "url": "https://maps.app.goo.gl/rNKbdZCgygEtRpni8",
+        "rect": [
+          397.314697265625,
+          4534.5625,
+          622.314697265625,
+          4577.3125
+        ]
+      },
+      {
+        "nombre": "Centro de Convenciones",
+        "url": "https://maps.app.goo.gl/hVikkhAvacAYZX6H9",
+        "rect": [
+          397.314697265625,
+          5519.3701171875,
+          622.314697265625,
+          5562.1201171875
+        ]
+      },
+      {
+        "nombre": "Hotel Blue city",
+        "url": "https://maps.app.goo.gl/fhqYUdDgf3K7RZeG6",
+        "rect": [
+          389.9261779785156,
+          8292.203125,
+          614.9261474609375,
+          8334.953125
+        ]
+      },
+      {
+        "nombre": "Hotel Danini",
+        "url": "https://maps.app.goo.gl/9G1BNrn88nbVLxUc7",
+        "rect": [
+          389.9261779785156,
+          8404.6103515625,
+          614.9261474609375,
+          8447.3603515625
+        ]
+      },
+      {
+        "nombre": "Hotel Central",
+    
