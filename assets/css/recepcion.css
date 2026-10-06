@@ -1,0 +1,12 @@
+#detalles .reception{padding:5cqw 5.2cqw 4cqw}
+#detalles .reception h2{font:7cqw/1.15 Allura,cursive;margin:0 0 4.4cqw;color:#111}
+#detalles .reception .venue{width:100%;height:auto;max-height:none;aspect-ratio:814/506;object-fit:cover;border-radius:5cqw;margin:0 auto 6cqw}
+#detalles .reception .description{font:3.8cqw/1.07 Alice,serif;letter-spacing:.15cqw;color:#d226c6;margin:0 auto;max-width:95%;text-wrap:balance}
+#detalles .reception .venue-name{font:3.8cqw/1.07 Alice,serif;letter-spacing:.1cqw;margin:0 -1.2cqw 4cqw;max-width:none;color:#d226c6}
+#detalles .reception .button{width:44%}
+#detalles .reception-flower{position:absolute;right:-12%;top:-7%;width:24%;transform:rotate(22deg);pointer-events:none}
+#detalles .reception-flowers{position:absolute;left:-24%;top:52%;width:30%;transform:rotate(-5deg);pointer-events:none}
+#detalles .reception-branch{position:absolute;right:-23%;bottom:-17%;width:62%;transform:rotate(-10deg);pointer-events:none}
+#detalles .reception-butterfly{position:absolute;right:-25%;bottom:-8%;width:20%;transform:rotate(12deg);pointer-events:none}
+@media(max-width:600px){#detalles .reception .description,#detalles .reception .venue-name{font-size:clamp(15px,3.8cqw,22px)}#detalles .reception .button{min-height:36px;width:55%;font-size:12px}}
+#detalles .reception-branch{right:-28%;bottom:-23%;width:55%}#detalles .reception-butterfly{right:-26%;bottom:-12%;width:18%}

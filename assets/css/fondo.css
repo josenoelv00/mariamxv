@@ -1,0 +1,7 @@
+/* One continuous gradient behind every section; cards keep their white surface. */
+html{background:#fff0be}
+body{background:linear-gradient(150deg,#fff0be 0%,#df70bd 38%,#ffe6b9 70%,#db66bc 100%);background-repeat:no-repeat;min-height:100vh}
+#invitacion{background:#ffd9f0;margin:0 auto;border-radius:0}
+#portada,#recuerdos,#fecha,.details-confirmation,.details-confirmation #detalles,#cierre{background:transparent}
+#portada::before,#recuerdos::before,#fecha::before,.details-confirmation::before,.details-confirmation #detalles::before{display:none}
+#fecha{border-bottom-color:transparent}

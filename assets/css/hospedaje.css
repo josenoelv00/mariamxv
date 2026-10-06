@@ -1,0 +1,12 @@
+#detalles .lodging{padding:6cqw 4cqw 5cqw;margin-bottom:10cqw}
+#detalles .lodging h2{font:5.8cqw/1.2 Allura,cursive;margin:0 -2cqw 2.5cqw;color:#111}
+#detalles .lodging>.icon{width:36%;height:auto;aspect-ratio:1;object-fit:contain;margin:0 auto 6cqw}
+#detalles .lodging .hotels{display:grid;gap:2.6cqw}
+#detalles .lodging .hotels>div{position:relative;min-width:0;padding:0 2cqw}
+#detalles .lodging .hotels>div::before{content:'';position:absolute;left:3%;top:.1cqw;width:5cqw;height:5cqw;background:url('../img/flor-dorada.svg') center/contain no-repeat}
+#detalles .lodging .hotels h3{font:3.8cqw/1.15 Alice,serif;letter-spacing:.1cqw;color:#d226c6;margin:0 0 .7cqw;padding:0 3cqw;overflow-wrap:anywhere}
+#detalles .lodging .button{font:2.2cqw/1.2 Alice,serif;width:46%;min-width:0;min-height:0;padding:.85cqw 1cqw;color:white;border-radius:4cqw;background:linear-gradient(90deg,#fff0b5,#d9b43b,#fff0b5)}
+#detalles .lodging-flowers{position:absolute;left:-27%;top:-13%;width:43%;transform:rotate(-82deg);pointer-events:none}
+#detalles .lodging-side{position:absolute;right:-22%;top:45%;width:30%;pointer-events:none}
+#detalles .lodging-butterfly{position:absolute;right:-18%;top:0;width:21%;transform:rotate(-15deg);pointer-events:none}
+@media(max-width:600px){#detalles .lodging .hotels h3{font-size:clamp(15px,3.8cqw,22px);padding:0 1.5cqw 0 3cqw}#detalles .lodging .button{min-height:36px;font-size:12px;width:58%}#detalles .lodging .hotels{gap:3cqw}}

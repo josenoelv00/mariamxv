@@ -28,7 +28,7 @@
     "grupos": []
   },
   "evento": {
-    "inicio": null,
+    "inicio": "2026-12-26T18:00:00-06:00",
     "fin": null,
     "titulo": "Mis quince años · Marian",
     "descripcion": "",
@@ -37,7 +37,7 @@
     "dia": 26,
     "mes": "Diciembre",
     "diaSemana": "Sábado",
-    "anio": null
+    "anio": 2026
   },
   "ubicaciones": [
     {

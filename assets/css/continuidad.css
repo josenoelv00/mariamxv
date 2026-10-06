@@ -1,0 +1,7 @@
+/* Shared backdrop prevents a visible cut between the last detail and RSVP. */
+.details-confirmation{position:relative;isolation:isolate;display:flow-root;background:linear-gradient(180deg,#fff0bd,#e790c5 65%,#d969be);padding-bottom:7%}
+.details-confirmation::before{content:'';position:absolute;inset:0 7.2%;background:#ffd9f0;z-index:-1;pointer-events:none}
+.details-confirmation #detalles{background:transparent;display:flow-root;padding-bottom:0}
+.details-confirmation #detalles::before{display:none}
+.details-confirmation #detalles .lodging{margin-bottom:0}
+.details-confirmation #confirmacion{margin-top:10%;margin-bottom:0;border:1px solid #e56bdc;border-radius:5cqw}

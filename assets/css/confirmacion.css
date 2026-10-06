@@ -1,0 +1,42 @@
+#confirmacion{position:relative;container-type:inline-size;width:61%;max-width:none;margin:0 auto 7%;padding:5% 3% 3%;border:0;border-radius:0 0 14px 14px;box-shadow:none;background:#fefdfb;color:#d226c6}
+#confirmacion::before{inset:0;background-size:100% 100%;opacity:.18}
+#confirmacion>.corner{display:none}
+#confirmacion h2{font:clamp(28px,8.5cqw,58px)/1.2 Allura,cursive;color:#111;margin:0 0 9cqw;text-shadow:0 2px 5px #0002}
+#confirmacion .rsvp-intro{display:grid;grid-template-columns:62% 30%;gap:8%;align-items:start;margin:0 0 14cqw}
+#confirmacion .rsvp-intro .body-copy{font:6.5cqw/1.05 Alice,serif;letter-spacing:.2cqw;text-wrap:balance;margin:0;max-width:none}
+#confirmacion .confirm-icon{width:100%;height:auto;margin:0;aspect-ratio:1;object-fit:contain}
+#confirmacion>.gold-line{position:relative;width:90%;height:1px;background:#c99a30;margin:0 auto 7cqw}
+#confirmacion>.gold-line::after{content:'✧';position:absolute;left:48%;top:0;font:26px/0 Alice,serif;color:#c99a30;background:#fefdfb}
+#confirmacion form{text-align:left;margin:0;font:clamp(14px,4.4cqw,20px)/1.4 Alice,serif}
+#confirmacion input:not([type=radio]){height:clamp(42px,10cqw,58px);border:1px solid #e78bdf;background:#ffffff50;border-radius:6px;color:#912184}
+#confirmacion fieldset{margin:8cqw 0}
+#confirmacion .radio{min-height:44px;border:1px solid transparent;border-radius:4px;background:#f8e2f4;margin-bottom:2cqw;padding:10px;gap:10px}
+#confirmacion .radio:has(input:checked){border-color:#bb35ab;background:#f3ceec}
+#confirmacion .quantities{display:grid;grid-template-columns:1fr;gap:8cqw}
+#confirmacion .submit{width:100%;min-height:44px;margin-top:4cqw;background:#dbaf47;color:#86157f;border-radius:16px;font:inherit}
+#confirmacion .form-note{font:clamp(11px,3.4cqw,14px)/1.4 Alice,serif;color:#82536f;margin-top:3cqw}
+#confirmacion .rsvp-left{position:absolute;left:-28%;top:-5%;width:40%;transform:rotate(-20deg);pointer-events:none}
+#confirmacion .rsvp-right{position:absolute;right:-24%;top:23%;width:40%;transform:rotate(20deg);pointer-events:none}
+#confirmacion .rsvp-bottom{position:absolute;left:-27%;bottom:10%;width:28%;pointer-events:none}
+/* Keep the same card proportions as the PDF at every viewport width. */
+#confirmacion{width:61%;padding:4% 3% 2%;border-radius:3cqw;background:#fefdfb}
+#confirmacion .rsvp-top-line{position:absolute;left:7%;right:7%;top:1.8%;height:1px;background:#d09c2e;color:#d09c2e;font:25px/0 Alice,serif;text-shadow:2px 0 white,-2px 0 white}
+#confirmacion h2{font-size:10cqw;line-height:1.15;margin:0 -2cqw 15cqw;white-space:nowrap}
+#confirmacion .rsvp-intro{grid-template-columns:58% 26%;gap:10%;margin:0 0 27cqw;align-items:start}
+#confirmacion .rsvp-intro .body-copy{font-size:6.5cqw;line-height:1.05;letter-spacing:.3cqw;text-wrap:balance}
+#confirmacion .confirm-icon{margin-top:-2cqw}
+#confirmacion>.gold-line{width:91%;margin-bottom:8cqw}
+#confirmacion form{font-size:4.4cqw;line-height:1.4}
+#confirmacion input:not([type=radio]){height:11cqw;min-height:32px;padding:1cqw 2cqw}
+#confirmacion fieldset{margin:9cqw 0 10cqw}
+#confirmacion .radio{position:relative;min-height:36px;padding:2cqw 3cqw;gap:0;margin-bottom:2cqw}
+#confirmacion .radio input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+#confirmacion .radio:has(input:focus-visible){outline:2px solid #86117b;outline-offset:3px}
+#confirmacion .radio:has(input:checked)::after{content:'✓';margin-left:auto}
+#confirmacion .quantities{gap:10cqw}
+#confirmacion .submit{min-height:36px;font-size:4.8cqw;border-radius:5cqw;margin-top:4cqw}
+#confirmacion .rsvp-left{left:-26%;top:1%;width:38%}
+#confirmacion .rsvp-right{right:-24%;top:25%;width:44%}
+#confirmacion .rsvp-bottom{left:-26%;bottom:11%;width:28%}
+@media(max-width:600px){#confirmacion form{font-size:12px}#confirmacion h2{font-size:9.6cqw}#confirmacion .rsvp-intro .body-copy{font-size:6.7cqw}#confirmacion .form-note{font-size:10px}}
+#confirmacion .rsvp-intro{grid-template-columns:52% 26%;gap:16%}#confirmacion::before{opacity:.1}

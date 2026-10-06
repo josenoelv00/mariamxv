@@ -1,0 +1,12 @@
+#detalles .dress{padding:7cqw 3.2cqw 4.5cqw;margin-bottom:14cqw}
+#detalles .dress h2{font:5.8cqw/1.2 Allura,cursive;white-space:normal;margin:0 -1cqw 3.5cqw}
+#detalles .dress .dress-icon{width:64%;height:auto;max-height:none;aspect-ratio:4/5;object-fit:contain;margin:0 auto 3cqw}
+#detalles .dress .large{font:3.9cqw/1.2 Alice,serif;color:#d226c6;margin:0 0 2.6cqw}
+#detalles .dress [data-field="vestimenta.nota"]{font:2.8cqw/1.3 Alice,serif;letter-spacing:.1cqw;color:#d226c6;margin:0}
+#detalles .dress .swatches{display:flex;justify-content:center;gap:4.4cqw;margin-top:1.8cqw}
+#detalles .dress .swatch{width:4.3cqw;height:4.3cqw;min-width:14px;min-height:14px;border:1px solid #d4c9cd;box-shadow:none}
+#detalles .dress-flowers{position:absolute;left:-29%;bottom:-16%;width:58%;transform:rotate(-80deg);pointer-events:none}
+#detalles .dress-leaves{position:absolute;left:-29%;bottom:-18%;width:15%;height:28%;transform:rotate(-17deg);pointer-events:none}
+#detalles .dress-top{position:absolute;right:-21%;top:-20%;width:38%;pointer-events:none}
+@media(max-width:600px){#detalles .dress [data-field="vestimenta.nota"]{font-size:clamp(12px,2.8cqw,17px)}#detalles .dress .large{font-size:clamp(16px,3.9cqw,24px)}}
+#detalles .dress-flowers{left:-28%;bottom:-22%;width:50%}#detalles .dress-top{display:none}

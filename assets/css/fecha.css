@@ -1,0 +1,18 @@
+/* Date text and countdown remain data-driven HTML. */
+#fecha{position:relative;container-type:inline-size;isolation:isolate;padding:7cqw 10% 4cqw;min-height:67.35cqw;background:linear-gradient(180deg,#e8a1bf,#fff0bd);border-bottom:3cqw solid #fff0bd;color:#d226c6}
+#fecha::before{content:'';position:absolute;inset:0 7.2%;background:#ffd9f0;z-index:-1}
+#fecha .date-row{display:flex;justify-content:center;align-items:center;gap:.5cqw;white-space:nowrap}
+#fecha .eyebrow,#fecha .month{font:5.7cqw/1.15 Alice,serif;letter-spacing:0;text-transform:uppercase;margin:0}
+#fecha .day-heart{position:relative;display:grid;place-items:center;width:14cqw;height:14cqw;flex-shrink:0}
+#fecha .day-heart svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-8deg);overflow:visible}
+#fecha .date-number{position:relative;margin:0 0 1cqw;font:5.7cqw/1 Alice,serif;color:#d226c6;text-shadow:0 .4cqw .5cqw #9d477c44}
+#fecha>.gold-line{display:none}
+#fecha>.script{margin:8cqw 0 4cqw;font:9cqw/1.2 Allura,cursive;color:#dbaa20}
+#fecha .countdown{display:flex;justify-content:center;gap:2.5cqw;width:68%;margin:0 auto;padding:2cqw 2cqw 1cqw;border-left:3px double #dbaa20;border-right:3px double #dbaa20}
+#fecha .countdown span{position:relative;flex:1;min-width:0;font:7.5cqw/1.2 Arial,sans-serif;font-variant-numeric:tabular-nums}
+#fecha .countdown span:not(:last-child)::after{content:':';position:absolute;right:-2cqw;top:0}
+#fecha .countdown small{font:1.8cqw/1.4 Arial,sans-serif;letter-spacing:0;margin-top:1cqw}
+#fecha .pending{font:clamp(10px,1.5cqw,13px)/1.4 Alice,serif;max-width:85%;margin:1.8cqw auto 0;color:#865576}
+#fecha>[data-field="evento.anio"]:empty{display:none}
+#fecha{min-height:0;aspect-ratio:1024.5/690;padding:7% 10% 3%;border-bottom-width:24px}
+#fecha{padding:7% 0 3%}#fecha .date-row{width:80%;margin:auto}#fecha .countdown{width:58%}

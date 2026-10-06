@@ -1,0 +1,21 @@
+#detalles{position:relative;isolation:isolate;container-type:inline-size;padding-top:5%;background:linear-gradient(180deg,#fff0bd,#e790c5 65%,#d969be)}
+#detalles::before{content:'';position:absolute;inset:0 7.2%;background:#ffd9f0;z-index:-1}
+#detalles>.section-title{font:9cqw/1.25 Allura,cursive;color:#dbaa20;margin:0 0 7cqw;text-align:center}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging){width:61%;max-width:none;min-height:0;margin:0 auto 9cqw;padding:5cqw 4.4cqw 4cqw;border:1px solid #e56bdc;border-radius:5cqw;box-shadow:none;background:#fefdfb;text-align:center}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging)::before{inset:2cqw;border-radius:4.2cqw;background:url('../img/patron-floral.svg') center/100% 100%;opacity:.42}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging)::after{content:'';position:absolute;inset:3.7cqw 3.4cqw;border:1px solid #e78cdf;border-radius:3.5cqw;pointer-events:none;z-index:-1}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging)>.corner{display:none}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) h2{font:5.8cqw/1.15 Allura,cursive;color:#111;margin:0 -1cqw 2.2cqw;text-shadow:0 .3cqw .6cqw #0002}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .venue{width:55%;height:auto;aspect-ratio:3/4;max-height:none;object-fit:cover;border-radius:3.5cqw;margin:0 auto 2cqw}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .time{font:3.8cqw/1.2 Alice,serif;color:#d226c6;margin:1.8cqw 0 3cqw}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .venue-name{font:3.8cqw/1.02 Alice,serif;letter-spacing:.15cqw;color:#d226c6;margin:0 auto 3cqw;max-width:100%}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .button{min-width:0;min-height:0;width:43%;padding:1cqw 1.5cqw;font:2.2cqw/1.2 Alice,serif;color:white;background:linear-gradient(90deg,#ffe8b9,#e83fc5 50%,#ffe8b9);border-radius:4cqw}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .button span{display:none}
+#detalles .ceremony-flowers{position:absolute;right:-15%;top:-2%;width:27%;pointer-events:none}
+#detalles .ceremony-leaves{position:absolute;left:-25%;bottom:-10%;width:40%;transform:rotate(-20deg);pointer-events:none}
+#detalles .ceremony-butterfly{position:absolute;left:-22%;bottom:18%;width:19%;transform:rotate(-15deg);pointer-events:none}
+#detalles .ornate-top,#detalles .ornate-bottom{position:absolute;left:7%;right:7%;height:1px;background:#d69c26;color:#d69c26;font:3cqw/0 Alice,serif;pointer-events:none;text-shadow:2px 0 #fefdfb,-2px 0 #fefdfb}
+#detalles .ornate-top{top:2.2cqw}#detalles .ornate-bottom{bottom:2.2cqw}
+@media(max-width:600px){#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .button{min-height:36px;width:55%;font-size:12px}#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .time,#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .venue-name{font-size:clamp(15px,3.8cqw,22px)}}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging){background:linear-gradient(#fff5af,#d7a733,#fff5af) left 1.5cqw center/2px 85% no-repeat,linear-gradient(#fff5af,#d7a733,#fff5af) right 1.5cqw center/2px 85% no-repeat,#fefdfb}
+#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging)::before{opacity:.18}

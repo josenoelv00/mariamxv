@@ -1,0 +1,17 @@
+/* Photo section: source PDF y=1380..2860, width 1024.5. */
+#recuerdos{position:relative;container-type:inline-size;isolation:isolate;aspect-ratio:1024.5/1480;padding:0;background:linear-gradient(180deg,#d85bbe,#e8a1bf);text-align:center}
+#recuerdos::before{content:'';position:absolute;inset:0 7.2%;background:#ffd9f0;z-index:-1}
+#recuerdos .memory-layout{display:contents}
+#recuerdos .eyebrow{position:absolute;left:7.2%;top:43%;margin:0;writing-mode:vertical-rl;transform:rotate(180deg);font:4.6cqw/1 Alice,serif;letter-spacing:.35cqw;color:#d226c6;text-shadow:.2cqw .2cqw .5cqw #9d477c44}
+#recuerdos .photos{position:absolute;left:14.3%;top:16%;width:30%;height:71%;margin:0;padding:1.5cqw;display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:1.3cqw;transform:rotate(-3.3deg);background:#fefdfb;box-shadow:none}
+#recuerdos .photos img,#recuerdos .photos img:nth-child(2),#recuerdos .photos img:nth-child(3){width:100%;height:100%;min-height:0;object-fit:cover;object-position:center;border:0;margin:0;transform:none;box-shadow:none}
+#recuerdos .memory-frame{position:absolute;left:49.3%;top:36.5%;width:47.5%;height:47%;min-height:0;margin:0;transform:none;border:1px solid #e65add;border-radius:5.5cqw;background:#fefdfb;outline:0;box-shadow:inset 0 0 0 1.4cqw #fff9fd}
+#recuerdos .memory-frame::before,#recuerdos .memory-frame::after{content:'';position:absolute;pointer-events:none;inset:1.3cqw;border:1px solid #dcae46;border-radius:4.7cqw}
+#recuerdos .memory-frame::after{inset:1.9cqw 1.5cqw 1.5cqw;border-color:#e985dc;border-radius:4.5cqw}
+#recuerdos .frame-crown{position:absolute;left:44%;top:18%;width:38%;height:14%;object-fit:contain;transform:rotate(-17deg)}
+#recuerdos .frame-bow{position:absolute;left:10%;top:.4%;width:80%;height:4.5%;object-fit:contain;z-index:1}
+#recuerdos .photos-top-branch{position:absolute;left:30%;top:3%;width:22%;height:15%;object-fit:contain;transform:rotate(30deg)}
+#recuerdos .photos-bottom-branch{position:absolute;left:8%;top:89%;width:37%;height:5%;object-fit:contain}
+#recuerdos .photos-bottom-flower{position:absolute;left:21%;top:86.5%;width:13%;transform:rotate(-18deg)}
+#recuerdos .memory-flower{position:absolute;right:0;bottom:0;width:21%;height:23%;object-fit:contain;transform:rotate(-28deg)}
+#recuerdos .photos-right-flower{position:absolute;right:13%;top:81%;width:12%;transform:rotate(20deg)}
