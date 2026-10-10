@@ -9,4 +9,3 @@
 #detalles .lodging-flowers{position:absolute;left:-27%;top:-13%;width:43%;transform:rotate(-82deg);pointer-events:none}
 #detalles .lodging-side{position:absolute;right:-22%;top:45%;width:30%;pointer-events:none}
 #detalles .lodging-butterfly{position:absolute;right:-18%;top:0;width:21%;transform:rotate(-15deg);pointer-events:none}
-@media(max-width:600px){#detalles .lodging .hotels h3{font-size:clamp(15px,3.8cqw,22px);padding:0 1.5cqw 0 3cqw}#detalles .lodging .button{min-height:36px;font-size:12px;width:58%}#detalles .lodging .hotels{gap:3cqw}}

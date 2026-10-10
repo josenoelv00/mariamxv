@@ -8,5 +8,5 @@
 #detalles .dress-flowers{position:absolute;left:-29%;bottom:-16%;width:58%;transform:rotate(-80deg);pointer-events:none}
 #detalles .dress-leaves{position:absolute;left:-29%;bottom:-18%;width:15%;height:28%;transform:rotate(-17deg);pointer-events:none}
 #detalles .dress-top{position:absolute;right:-21%;top:-20%;width:38%;pointer-events:none}
-@media(max-width:600px){#detalles .dress [data-field="vestimenta.nota"]{font-size:clamp(12px,2.8cqw,17px)}#detalles .dress .large{font-size:clamp(16px,3.9cqw,24px)}}
+
 #detalles .dress-flowers{left:-28%;bottom:-22%;width:50%}#detalles .dress-top{display:none}

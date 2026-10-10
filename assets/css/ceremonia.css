@@ -16,6 +16,6 @@
 #detalles .ceremony-butterfly{position:absolute;left:-22%;bottom:18%;width:19%;transform:rotate(-15deg);pointer-events:none}
 #detalles .ornate-top,#detalles .ornate-bottom{position:absolute;left:7%;right:7%;height:1px;background:#d69c26;color:#d69c26;font:3cqw/0 Alice,serif;pointer-events:none;text-shadow:2px 0 #fefdfb,-2px 0 #fefdfb}
 #detalles .ornate-top{top:2.2cqw}#detalles .ornate-bottom{bottom:2.2cqw}
-@media(max-width:600px){#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .button{min-height:36px;width:55%;font-size:12px}#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .time,#detalles :is(.ceremony,.reception,.dress,.gifts,.lodging) .venue-name{font-size:clamp(15px,3.8cqw,22px)}}
+
 #detalles :is(.ceremony,.reception,.dress,.gifts,.lodging){background:linear-gradient(#fff5af,#d7a733,#fff5af) left 1.5cqw center/2px 85% no-repeat,linear-gradient(#fff5af,#d7a733,#fff5af) right 1.5cqw center/2px 85% no-repeat,#fefdfb}
 #detalles :is(.ceremony,.reception,.dress,.gifts,.lodging)::before{opacity:.18}

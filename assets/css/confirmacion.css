@@ -38,5 +38,5 @@
 #confirmacion .rsvp-left{left:-26%;top:1%;width:38%}
 #confirmacion .rsvp-right{right:-24%;top:25%;width:44%}
 #confirmacion .rsvp-bottom{left:-26%;bottom:11%;width:28%}
-@media(max-width:600px){#confirmacion form{font-size:12px}#confirmacion h2{font-size:9.6cqw}#confirmacion .rsvp-intro .body-copy{font-size:6.7cqw}#confirmacion .form-note{font-size:10px}}
+
 #confirmacion .rsvp-intro{grid-template-columns:52% 26%;gap:16%}#confirmacion::before{opacity:.1}

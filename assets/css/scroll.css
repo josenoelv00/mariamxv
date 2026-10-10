@@ -1,0 +1,85 @@
+/* Patrón de Plantilla/Web/assets/css/layout.css: pantalla y tarjeta separadas. */
+html.scroll-apolo, .scroll-apolo body {height:100%;overflow:hidden}
+.scroll-apolo #invitacion {
+  width:calc(100% - 24px);
+  height:100vh;height:100svh;overflow-x:hidden;overflow-y:auto;
+  overscroll-behavior-y:contain;scroll-snap-type:y mandatory;
+  scroll-behavior:smooth;scrollbar-width:none;
+}
+.scroll-apolo #invitacion::-webkit-scrollbar {display:none}
+.scroll-apolo .scroll-screen {
+  min-height:100vh;min-height:100svh;width:100%;
+  display:flex;flex-direction:column;justify-content:center;
+  padding-block:6px;scroll-snap-align:start;scroll-snap-stop:always;
+}
+.scroll-apolo .scroll-screen > * {flex-shrink:0}
+.scroll-apolo .scroll-composition {
+  width:112%;align-self:center;margin-inline:0;container-type:inline-size;
+}
+.scroll-apolo :is(#portada,#recuerdos,#fecha,#cierre) {width:100%;scroll-margin-top:0}
+/* Compacta la composición completa sin cambiar sus elementos ni coordenadas. */
+.scroll-apolo #portada {
+  width:100%;
+  aspect-ratio:.82;
+  align-self:center;margin-inline:0;
+}
+.scroll-apolo #detalles {padding-block:0}
+.scroll-apolo #detalles .card,
+.scroll-apolo .details-confirmation #confirmacion,
+.scroll-apolo #cierre {margin-block:0}
+.scroll-apolo #details-title {font:9cqw/1.25 Allura,cursive;text-align:center;margin:0 0 7cqw}
+/* Confirmación más corta: compactar espacios, conservar campos y contenido. */
+.scroll-apolo #confirmacion h2 {margin-bottom:6cqw}
+.scroll-apolo #confirmacion .rsvp-intro {margin-bottom:8cqw}
+.scroll-apolo #confirmacion > .gold-line {margin-bottom:4cqw}
+.scroll-apolo #confirmacion fieldset {margin:4cqw 0}
+.scroll-apolo #confirmacion fieldset {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3cqw}
+.scroll-apolo #confirmacion fieldset .radio {min-width:0;padding-inline:1cqw;font-size:clamp(9px,4.4cqw,16px);white-space:nowrap}
+.scroll-apolo #confirmacion form label,
+.scroll-apolo #confirmacion legend {margin-bottom:4px}
+.scroll-apolo #confirmacion .quantities {grid-template-columns:repeat(2,minmax(0,1fr));gap:3cqw}
+.scroll-apolo #confirmacion .submit {min-width:0;padding-inline:2cqw;margin-top:3cqw}
+.scroll-apolo #invitacion:focus-visible {outline:2px solid #ad169f;outline-offset:-2px}
+.scroll-apolo #invitacion:has(input:focus,textarea:focus,select:focus,button:focus,a:focus) {scroll-snap-type:none}
+@media(prefers-reduced-motion:reduce) {
+  .scroll-apolo #invitacion {scroll-behavior:auto;scroll-snap-type:none}
+}
+
+.scroll-apolo #detalles .card, .scroll-apolo .details-confirmation #confirmacion {width:78%}
+/* Estas composiciones tienen márgenes internos propios, además del contenedor. */
+.scroll-apolo #recuerdos {margin-block:0;transform:translateX(-2%)}
+.scroll-apolo #recuerdos .photos-top-branch {top:8%}
+.scroll-apolo #recuerdos .photos-bottom-branch {top:85%}
+.scroll-apolo #recuerdos .photos-bottom-flower {top:83%}
+.scroll-apolo #recuerdos .memory-flower {bottom:5%}
+.scroll-apolo #recuerdos .photos-right-flower {top:78%}
+/* Portada: misma tarjeta redondeada y líneas delicadas que recepción. */
+.scroll-apolo #portada .cover-frame {
+  inset:10.15% 8% 13%;
+  border:1px solid #e56bdc;border-radius:5cqw;background:#fefdfb;
+  box-shadow:none;
+}
+.scroll-apolo #portada .cover-frame::after {
+  inset:2.7cqw;border:1px solid #e78cdf;border-radius:3.5cqw;
+  background:url('../img/patron-floral.svg') center/100% 100%;
+  opacity:.18;
+}
+.scroll-apolo #portada .cover-frame::before {
+  content:'';position:absolute;inset:1.3cqw;
+  border:1px solid #d6ae56;border-radius:4.2cqw;pointer-events:none;
+}
+
+/* Confirmación compacta compartida por ambas orientaciones. */
+.scroll-apolo #confirmacion h2 {margin-bottom:3cqw}
+.scroll-apolo #confirmacion .rsvp-intro {
+  width:90%;margin:0 auto 3cqw;
+  grid-template-columns:64% 28%;gap:8%;align-items:center;
+}
+.scroll-apolo #confirmacion .rsvp-intro .body-copy {
+  font-size:5.3cqw;line-height:1.08;letter-spacing:.15cqw;
+}
+.scroll-apolo #confirmacion .confirm-icon {margin-top:0}
+.scroll-apolo #confirmacion > .gold-line {margin-bottom:3cqw}
+.scroll-apolo #confirmacion .rsvp-message-line {display:block;white-space:nowrap}
+
+.scroll-apolo #details-title {margin-bottom:1.5cqw}

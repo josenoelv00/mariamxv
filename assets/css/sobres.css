@@ -6,4 +6,3 @@
 #detalles .gifts-butterfly{position:absolute;right:-18%;top:14%;width:21%;transform:rotate(-16deg);pointer-events:none}
 #detalles .gifts-garland{position:absolute;left:17%;bottom:-5%;width:65%;height:9%;object-fit:contain;pointer-events:none}
 #detalles .gifts-flower{position:absolute;left:36%;bottom:-8%;width:23%;transform:rotate(22deg);pointer-events:none}
-@media(max-width:600px){#detalles .gifts .body-copy{font-size:clamp(15px,3.8cqw,23px);line-height:1.15}}
