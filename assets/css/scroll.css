@@ -83,3 +83,13 @@ html.scroll-apolo, .scroll-apolo body {height:100%;overflow:hidden}
 .scroll-apolo #confirmacion .rsvp-message-line {display:block;white-space:nowrap}
 
 .scroll-apolo #details-title {margin-bottom:1.5cqw}
+
+/* Distribuir el alto sobrante dentro de la tarjeta; fotos y fuentes sin deformación. */
+.scroll-apolo .card.roomy-surface {display:flex;flex-direction:column;justify-content:space-evenly}
+.scroll-apolo .card.roomy-surface > :not(img):not(.ornate-top):not(.ornate-bottom) {flex-shrink:0}
+.scroll-apolo #fecha.roomy-surface {display:flex;flex-direction:column;justify-content:space-evenly;aspect-ratio:auto}
+.scroll-apolo #fecha.roomy-surface > .script,
+.scroll-apolo #fecha.roomy-surface > .countdown {margin-block:0}
+.scroll-apolo #fecha.roomy-surface > [hidden] {display:none}
+
+.scroll-apolo .card.roomy-surface > .button {align-self:center}

@@ -44,6 +44,34 @@ function iniciarScroll() {
       const widthFactor = 1.12;
       // Misma base de composición en vertical y horizontal.
       composition.style.width = `${invitation.clientWidth * widthFactor}px`;
+      const surface = composition.querySelector('.card, #portada, #recuerdos, #fecha, #cierre');
+      surface.style.removeProperty('height');
+      surface.style.removeProperty('min-height');
+      surface.classList.remove('roomy-surface');
+      // Fórmula continua: E = max(0, H - V) * max(0, 1 - W/H).
+      // H: alto útil; W: ancho de pantalla; V: alto visible natural.
+      // Se distribuye E dentro del diseño, sin scaleY en texto ni imágenes.
+      const naturalHeight = surface.offsetHeight;
+      const zoomBefore = Number(composition.style.zoom) || 1;
+      let visibleHeight = naturalHeight;
+      if (surface.matches('#portada, #recuerdos')) {
+        const selector = surface.id === 'portada' ? '.cover-frame' : '.photos, .memory-frame, .frame-crown, .eyebrow';
+        const rects = [...surface.querySelectorAll(selector)].map(node => node.getBoundingClientRect());
+        visibleHeight = (Math.max(...rects.map(rect => rect.bottom)) - Math.min(...rects.map(rect => rect.top))) / zoomBefore;
+      }
+      const heading = composition.querySelector('#details-title');
+      const headingHeight = heading ? heading.offsetHeight + parseFloat(getComputedStyle(heading).marginBottom) : 0;
+      const usefulHeight = Math.max(1, available - headingHeight);
+      const verticalWeight = Math.max(0, 1 - invitation.clientWidth / invitation.clientHeight);
+      const extra = Math.max(0, usefulHeight - visibleHeight) * verticalWeight;
+      if (surface.id !== 'cierre' && extra > 0.5) {
+        surface.classList.add('roomy-surface');
+        if (surface.matches('#portada, #recuerdos')) {
+          surface.style.height = `${naturalHeight * (visibleHeight + extra) / Math.max(1, visibleHeight)}px`;
+        } else {
+          surface.style.minHeight = `${naturalHeight + extra}px`;
+        }
+      }
       const panel = composition.querySelector('#portada, #recuerdos, #fecha, #cierre');
       if (panel) {
         // Medir únicamente el contenido principal; los adornos no reservan altura.
