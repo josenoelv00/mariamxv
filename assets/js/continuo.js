@@ -37,6 +37,25 @@ function iniciarScroll() {
     } else message.textContent = originalMessage;
   };
   updateMessage();
+  // El espacio entre contenidos es siempre 24 px; las flores pueden sobresalir.
+  const compactar = () => {
+    const selectors = {
+      portada: '.cover-frame', recuerdos: '.photos, .memory-frame, .frame-crown, .eyebrow',
+      fecha: '.date-row, [data-field="evento.anio"], .script, #contador, .pending:not([hidden])',
+      cierre: '.footer-number, .name'
+    };
+    for (const [id, selector] of Object.entries(selectors)) {
+      const panel = document.getElementById(id);
+      const bounds = panel.getBoundingClientRect();
+      const boxes = [...panel.querySelectorAll(selector)].map(node => node.getBoundingClientRect());
+      panel.style.marginTop = `${bounds.top - Math.min(...boxes.map(box => box.top))}px`;
+      panel.style.marginBottom = `${Math.max(...boxes.map(box => box.bottom)) - bounds.bottom}px`;
+    }
+  };
+  const resize = new ResizeObserver(compactar);
+  compositions.forEach(composition => resize.observe(composition));
+  compactar();
+  document.fonts.ready.then(compactar);
 }
 if (!invitation.hidden) iniciarScroll();
 else {
