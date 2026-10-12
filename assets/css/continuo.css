@@ -1,6 +1,6 @@
 /* Variante de lectura continua, sin scroll snap ni escalado por pantalla. */
 html.scroll-apolo, .scroll-apolo body {height:auto;overflow:visible;scroll-behavior:auto}
 .scroll-apolo #invitacion {height:auto;overflow:hidden;scroll-snap-type:none;scroll-behavior:auto;overscroll-behavior:auto}
-.scroll-apolo .scroll-screen {min-height:0;padding-block:32px;scroll-snap-align:none;scroll-snap-stop:normal}
+.scroll-apolo .scroll-screen {min-height:0;padding-block:12px;scroll-snap-align:none;scroll-snap-stop:normal}
 .scroll-apolo .scroll-composition {width:112%;zoom:1}
 .scroll-apolo #portada {aspect-ratio:.82}
