@@ -59,6 +59,9 @@
     --tipo-interlineado: var(--interlineado-texto);
   }
 
+  #fecha .date-row [data-estilo="texto"] {
+    font-size: calc(var(--altura-texto) * 1.7);
+  }
   #recuerdos .eyebrow {
     font-size: calc(var(--altura-15) * 0.4);
     white-space: nowrap;

@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#ffd9f0" />
     <title>Mis quince años · Marian</title>
     <link rel="stylesheet" href="assets/css/base.css?v=66" />
-    <link rel="stylesheet" href="assets/css/secciones.css?v=66" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=66" />
-    <link rel="stylesheet" href="assets/css/tipografia.css?v=66" />
+    <link rel="stylesheet" href="assets/css/secciones.css?v=67" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=67" />
+    <link rel="stylesheet" href="assets/css/tipografia.css?v=67" />
     <script defer src="assets/js/datos-loader.js?v=61"></script>
     <script defer src="assets/js/render.js?v=66"></script>
     <script defer src="assets/js/confirmacion.js?v=61"></script>
@@ -128,50 +128,53 @@
       <div class="scroll-screen">
         <div class="scroll-composition">
           <section id="fecha" class="date" aria-label="Fecha de la celebración">
-            <div class="date-row">
-              <p class="eyebrow" data-field="evento.diaSemana" data-estilo="texto"></p>
-              <div class="day-heart">
-                <svg viewBox="0 0 160 150" aria-hidden="true">
-                  <path
-                    d="M82 133C35 121 2 89 8 53C13 22 49 17 72 40C89 -2 143 4 153 43C164 80 111 107 91 146"
-                    fill="none"
-                    stroke="#dbaa20"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span class="date-number" data-field="evento.dia" data-estilo="texto"></span>
+            <div class="date-calendar">
+              <div class="date-row">
+                <p class="eyebrow" data-field="evento.diaSemana" data-estilo="texto"></p>
+                <div class="day-heart">
+                  <svg viewBox="0 0 160 150" aria-hidden="true">
+                    <path
+                      d="M82 133C35 121 2 89 8 53C13 22 49 17 72 40C89 -2 143 4 153 43C164 80 111 107 91 146"
+                      fill="none"
+                      stroke="#dbaa20"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <span class="date-number" data-field="evento.dia" data-estilo="texto"></span>
+                </div>
+                <p class="month" data-field="evento.mes" data-estilo="texto"></p>
               </div>
-              <p class="month" data-field="evento.mes" data-estilo="texto"></p>
+              <p data-field="evento.anio" data-estilo="texto"></p>
             </div>
-            <p data-field="evento.anio" data-estilo="texto"></p>
-            <div class="gold-line"></div>
-            <p class="script" data-field="textos.faltan" data-estilo="titulo"></p>
-            <div id="contador" class="countdown" aria-label="Cuenta regresiva">
-              <span data-estilo="texto">
-                —
-                <small data-field="textos.dias" data-estilo="texto"></small>
-              </span>
-              <span data-estilo="texto">
-                —
-                <small data-field="textos.horas" data-estilo="texto"></small>
-              </span>
-              <span data-estilo="texto">
-                —
-                <small data-field="textos.minutos" data-estilo="texto"></small>
-              </span>
-              <span data-estilo="texto">
-                —
-                <small data-field="textos.segundos" data-estilo="texto"></small>
-              </span>
+            <div class="date-countdown">
+              <p class="script" data-field="textos.faltan" data-estilo="titulo"></p>
+              <div id="contador" class="countdown" aria-label="Cuenta regresiva">
+                <span data-estilo="texto">
+                  —
+                  <small data-field="textos.dias" data-estilo="texto"></small>
+                </span>
+                <span data-estilo="texto">
+                  —
+                  <small data-field="textos.horas" data-estilo="texto"></small>
+                </span>
+                <span data-estilo="texto">
+                  —
+                  <small data-field="textos.minutos" data-estilo="texto"></small>
+                </span>
+                <span data-estilo="texto">
+                  —
+                  <small data-field="textos.segundos" data-estilo="texto"></small>
+                </span>
+              </div>
+              <p
+                class="pending"
+                id="fecha-pendiente"
+                data-field="textos.fechaPendiente"
+                data-estilo="texto"
+              ></p>
             </div>
             <p data-estilo="frase" class="date-message" data-field="evento.frase"></p>
-            <p
-              class="pending"
-              id="fecha-pendiente"
-              data-field="textos.fechaPendiente"
-              data-estilo="texto"
-            ></p>
           </section>
         </div>
       </div>

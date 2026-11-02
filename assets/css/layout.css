@@ -25,13 +25,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 6cqw;
     aspect-ratio: auto;
   }
-
-  .scroll-apolo #fecha > .countdown {
-    margin-block: 0;
-  }
-  .scroll-apolo #fecha > [hidden] {
+  .scroll-apolo #fecha [hidden] {
     display: none;
   }
   /* 02 · Pantalla → composición → tamaño común de las secciones. */

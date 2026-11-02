@@ -508,8 +508,8 @@
     position: relative;
     display: grid;
     place-items: center;
-    width: 14cqw;
-    height: 14cqw;
+    width: 23.8cqw;
+    height: 23.8cqw;
     flex-shrink: 0;
   }
   #fecha .day-heart svg {
@@ -526,11 +526,16 @@
     color: #d226c6;
     text-shadow: 0 0.4cqw 0.5cqw #9d477c44;
   }
-  #fecha > .gold-line {
-    display: none;
+  #fecha .date-calendar,
+  #fecha .date-countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4cqw;
+    width: 100%;
   }
-  #fecha > .script {
-    margin: 8cqw 0 4cqw;
+  #fecha .date-countdown > .script {
+    margin: 0;
     color: #dbaa20;
   }
   #fecha .countdown span {
@@ -547,7 +552,7 @@
     margin: 1.8cqw auto 0;
     color: #865576;
   }
-  #fecha > [data-field="evento.anio"]:empty {
+  #fecha [data-field="evento.anio"]:empty {
     display: none;
   }
   #fecha .date-row {
@@ -556,10 +561,8 @@
     align-items: center;
     gap: 0.5cqw;
     white-space: nowrap;
-    width: 80%;
-    margin: auto;
-    transform: translateY(-20px) scale(1.7);
-    transform-origin: center;
+    width: 88%;
+    margin: 0;
   }
   #fecha .countdown {
     display: flex;
@@ -573,7 +576,7 @@
   }
   #fecha > .date-message {
     width: 78%;
-    margin: 6cqw auto 0;
+    margin: 0 auto;
     color: #d226c6;
     text-align: center;
   }
