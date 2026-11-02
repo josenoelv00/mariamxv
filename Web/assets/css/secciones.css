@@ -377,6 +377,29 @@
     bottom: 2.2cqw;
   }
 
+  /* En pantallas altas, la altura extra debe ocuparla también la tarjeta interior. */
+  @media (max-aspect-ratio: 3/4) {
+    #portada .cover-frame {
+      inset: 6% 5% 7%;
+    }
+    #portada .cover-composition {
+      width: min(100cqw, calc(100cqh * 2303 / 4350));
+    }
+    .scroll-apolo :is(#papas, #padrinos) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 0;
+    }
+    :is(#papas, #padrinos) .company-card {
+      flex: 1;
+      justify-content: space-evenly;
+    }
+    :is(#papas, #padrinos) .company-photo {
+      width: 70%;
+    }
+  }
+
   /* 04 · Fotografías: tira, rótulo y ornamentos. */
   #recuerdos {
     position: relative;
