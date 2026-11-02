@@ -1,0 +1,127 @@
+(() => {
+  // Ajusta las secciones directas de la invitación sin generar contenido.
+  const invitation = document.querySelector("#invitacion");
+  function iniciarScroll(datos) {
+    document.documentElement.classList.add("scroll-apolo");
+    invitation.tabIndex = 0;
+    invitation.setAttribute("aria-label", "Invitación de Marian, desplazamiento por secciones");
+    const panels = invitation.querySelectorAll(":scope > section");
+    for (const panel of panels) {
+      const screen = document.createElement("div");
+      screen.className = "scroll-screen";
+      panel.before(screen);
+      screen.append(panel);
+      if (panel.classList.contains("ceremony")) {
+        screen.prepend(document.querySelector("#details-title"));
+        screen.classList.add("scroll-screen-details");
+      }
+      {
+        const composition = document.createElement("div");
+        composition.className = "scroll-composition";
+        composition.append(...screen.childNodes);
+        screen.append(composition);
+      }
+    }
+    // Cada composición cabe completa en la pantalla, sin recortar elementos.
+    const compositions = invitation.querySelectorAll(".scroll-composition");
+    const fit = () => {
+      const scales = [];
+      // Base tipográfica única: no depende del ancho de cada tarjeta.
+      for (const [tipo, estilo] of Object.entries(datos.estilos)) {
+        invitation.style.setProperty(
+          "--altura-" + tipo,
+          (estilo.altura * invitation.clientWidth * 1.12) / 1000 + "px",
+        );
+      }
+      const available = Math.max(1, invitation.clientHeight - 12);
+      for (const composition of compositions) {
+        const widthFactor = 1.12;
+        // Misma base de composición en vertical y horizontal.
+        composition.style.width = `${invitation.clientWidth * widthFactor}px`;
+        const surface = composition.querySelector(".card, #portada, #recuerdos, #fecha, #cierre");
+        surface.style.removeProperty("height");
+        surface.style.removeProperty("min-height");
+        surface.classList.remove("roomy-surface");
+        // Fórmula continua: E = max(0, H - V) * max(0, 1 - W/H).
+        // H: alto útil; W: ancho de pantalla; V: alto visible natural.
+        // Se distribuye E dentro del diseño, sin scaleY en texto ni imágenes.
+        const naturalHeight = surface.offsetHeight;
+        const zoomBefore = Number(composition.style.zoom) || 1;
+        let visibleHeight = naturalHeight;
+        if (surface.matches("#portada, #recuerdos")) {
+          const selector =
+            surface.id === "portada"
+              ? ".cover-frame"
+              : ".photos, .memory-frame, .frame-crown, .eyebrow";
+          const rects = [...surface.querySelectorAll(selector)].map((node) =>
+            node.getBoundingClientRect(),
+          );
+          visibleHeight =
+            (Math.max(...rects.map((rect) => rect.bottom)) -
+              Math.min(...rects.map((rect) => rect.top))) /
+            zoomBefore;
+        }
+        const heading = composition.querySelector("#details-title");
+        const headingHeight = heading
+          ? heading.offsetHeight + parseFloat(getComputedStyle(heading).marginBottom)
+          : 0;
+        const usefulHeight = Math.max(1, available - headingHeight);
+        const verticalWeight = Math.max(0, 1 - invitation.clientWidth / invitation.clientHeight);
+        const extra = Math.max(0, usefulHeight - visibleHeight) * verticalWeight;
+        if (surface.id !== "cierre" && extra > 0.5) {
+          surface.classList.add("roomy-surface");
+          if (surface.matches("#portada, #recuerdos")) {
+            surface.style.height = `${(naturalHeight * (visibleHeight + extra)) / Math.max(1, visibleHeight)}px`;
+          } else {
+            surface.style.minHeight = `${naturalHeight + extra}px`;
+          }
+        }
+        const panel = composition.querySelector("#portada, #recuerdos, #fecha, #cierre");
+        if (panel) {
+          // Medir únicamente el contenido principal; los adornos no reservan altura.
+          const zoom = Number(composition.style.zoom) || 1;
+          const bounds = panel.getBoundingClientRect();
+          const selectors = {
+            portada: ".cover-frame",
+            recuerdos: ".photos, .memory-frame, .frame-crown, .eyebrow",
+            fecha:
+              '.date-row, [data-field="evento.anio"], .script, #contador, .date-message, .pending:not([hidden])',
+            cierre: ".footer-number, .name",
+          };
+          const content = [...panel.querySelectorAll(selectors[panel.id])].map((element) =>
+            element.getBoundingClientRect(),
+          );
+          const top = Math.min(...content.map((rect) => rect.top));
+          const bottom = Math.max(...content.map((rect) => rect.bottom));
+          panel.style.marginTop = `${-Math.max(0, (top - bounds.top) / zoom - 8)}px`;
+          panel.style.marginBottom = `${-Math.max(0, (bounds.bottom - bottom) / zoom - 8)}px`;
+        }
+        const scale = Math.min(
+          1,
+          available /
+            Math.ceil(
+              composition.getBoundingClientRect().height / (Number(composition.style.zoom) || 1),
+            ),
+        );
+        scales.push(scale);
+      }
+      // Comparación: aplicar la misma escala mínima en ambas orientaciones.
+      const commonScale = Math.min(...scales);
+      compositions.forEach((composition) => {
+        composition.style.zoom = String(commonScale);
+      });
+    };
+    const resize = new ResizeObserver(fit);
+    resize.observe(invitation);
+    compositions.forEach((composition) => resize.observe(composition));
+    fit();
+    document.fonts.ready.then(fit);
+    // Los enlaces directos se resuelven después de preparar la estructura.
+    if (location.hash) {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      target?.scrollIntoView({ behavior: "instant", block: "start" });
+    }
+  }
+
+  window.Invitacion.iniciarScroll = iniciarScroll;
+})();

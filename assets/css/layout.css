@@ -1,0 +1,281 @@
+@layer diseno {
+  /* 01 · Ventana y contenedor de desplazamiento. */
+  html.scroll-apolo,
+  .scroll-apolo body {
+    height: 100%;
+    overflow: hidden;
+  }
+  .scroll-apolo #invitacion::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-apolo #invitacion {
+    width: calc(100% - 24px);
+    height: 100svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding-block: 0;
+  }
+  .scroll-apolo #fecha.roomy-surface {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    aspect-ratio: auto;
+  }
+
+  .scroll-apolo #fecha.roomy-surface > .countdown {
+    margin-block: 0;
+  }
+  .scroll-apolo #fecha.roomy-surface > [hidden] {
+    display: none;
+  }
+  :is(#papas, #padrinos) .company-card {
+    isolation: isolate;
+    overflow: visible;
+  }
+  #invitacion
+    :is(
+      .cover-art,
+      .cover-ornament,
+      .company-flower,
+      .photos-top-branch,
+      .photos-bottom-branch,
+      .photos-bottom-flower,
+      .photos-right-flower,
+      .memory-flower,
+      .frame-crown,
+      .frame-bow,
+      .corner,
+      .ceremony-flowers,
+      .ceremony-leaves,
+      .ceremony-butterfly,
+      .reception-flower,
+      .reception-flowers,
+      .reception-branch,
+      .reception-butterfly,
+      .dress-flowers,
+      .dress-leaves,
+      .dress-top,
+      .gifts-branch,
+      .gifts-butterfly,
+      .gifts-garland,
+      .gifts-flower,
+      .lodging-flowers,
+      .lodging-side,
+      .lodging-butterfly,
+      .rsvp-left,
+      .rsvp-right,
+      .rsvp-bottom,
+      .closing-flower,
+      .closing-butterfly
+    ) {
+    z-index: var(--layer-ornament);
+    pointer-events: none;
+  }
+
+  /* 02 · Pantalla → composición → tamaño común de las secciones. */
+  .scroll-apolo .scroll-screen > * {
+    flex-shrink: 0;
+  }
+  .scroll-apolo .scroll-screen {
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 6px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    isolation: isolate;
+    position: relative;
+    overflow: clip;
+    overflow-clip-margin: 0;
+  }
+  .scroll-apolo .scroll-composition {
+    width: 112%;
+    align-self: center;
+    margin-inline: 0;
+    container-type: inline-size;
+    position: relative;
+    isolation: isolate;
+    flex-shrink: 0;
+  }
+
+  /* 03 · Ajustes de composición, en el orden de la invitación. */
+  .scroll-apolo :is(#portada, #recuerdos, #fecha, #cierre) {
+    width: 100%;
+    scroll-margin-top: 0;
+  }
+  .scroll-apolo #portada {
+    width: 100%;
+    aspect-ratio: 0.82;
+    align-self: center;
+    margin-inline: 0;
+  }
+  .scroll-apolo #invitacion .card,
+  .scroll-apolo #confirmacion,
+  .scroll-apolo #cierre {
+    margin-block: 0;
+  }
+  .scroll-apolo #confirmacion fieldset {
+    margin: 4cqw 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3cqw;
+  }
+  .scroll-apolo #confirmacion fieldset .radio {
+    min-width: 0;
+    padding-inline: 1cqw;
+    white-space: nowrap;
+  }
+  .scroll-apolo #confirmacion form label,
+  .scroll-apolo #confirmacion legend {
+    margin-bottom: 4px;
+  }
+  .scroll-apolo #confirmacion .quantities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3cqw;
+  }
+  .scroll-apolo #confirmacion .submit {
+    min-width: 0;
+    padding-inline: 2cqw;
+    margin-top: 3cqw;
+  }
+  .scroll-apolo #invitacion .card,
+  .scroll-apolo #confirmacion {
+    width: 78%;
+  }
+  .scroll-apolo #recuerdos {
+    margin-block: 0;
+    transform: none;
+  }
+  .scroll-apolo #recuerdos .photos-top-branch {
+    top: 8%;
+  }
+  .scroll-apolo #recuerdos .photos-bottom-branch {
+    top: 85%;
+  }
+  .scroll-apolo #recuerdos .photos-bottom-flower {
+    top: 83%;
+  }
+  .scroll-apolo #confirmacion h2 {
+    margin-bottom: 3cqw;
+  }
+  .scroll-apolo #confirmacion .rsvp-intro {
+    margin-bottom: 8cqw;
+    width: 90%;
+    margin: 0 auto 3cqw;
+    grid-template-columns: 64% 28%;
+    gap: 8%;
+    align-items: center;
+  }
+  .scroll-apolo #confirmacion .confirm-icon {
+    margin-top: 0;
+  }
+  .scroll-apolo #confirmacion > .gold-line {
+    margin-bottom: 3cqw;
+  }
+  .scroll-apolo #confirmacion .rsvp-message-line {
+    display: block;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+  }
+  .scroll-apolo #details-title {
+    text-align: center;
+    margin: 0 0 7cqw;
+    margin-bottom: 1.5cqw;
+  }
+  .scroll-apolo .card.roomy-surface {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .scroll-apolo .card.roomy-surface > :not(img):not(.ornate-top):not(.ornate-bottom) {
+    flex-shrink: 0;
+  }
+  .scroll-apolo .card.roomy-surface > .button {
+    align-self: center;
+  }
+
+  /* 04 · Capas: patrón de fondo → contenido → marco → ornamentos. */
+  #invitacion img[src*="ramo-flores-dorado.svg"],
+  #invitacion img[src*="rama-floral-horizontal.svg"],
+  #invitacion img[src*="ramo-delicado.svg"],
+  #invitacion img[src*="ramita-dos-flores.svg"],
+  #invitacion img[src*="rama-hojas-fina.svg"],
+  #invitacion img[src*="flor-dorada.svg"],
+  #invitacion img[src*="mariposa-dorada.svg"],
+  #invitacion img[src*="rama-hojas-dorada.svg"],
+  #invitacion img[src*="guirnalda-horizontal.svg"],
+  #invitacion img[src*="corona-dorada.png"],
+  #invitacion .cover-art {
+    z-index: 20;
+    pointer-events: none;
+    opacity: 1;
+  }
+  #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line) {
+    z-index: 20;
+    color: var(--ornament-gold);
+    pointer-events: none;
+  }
+  #invitacion :is(.ornate-top, .ornate-bottom) {
+    background-color: var(--ornament-gold);
+  }
+  :root {
+    --ornament-gold: #d29931;
+    --layer-pattern: 0;
+    --layer-content: 1;
+    --layer-frame: 2;
+    --layer-ornament: 20;
+  }
+  #invitacion :is(.card, .company-card, .cover-composition, #recuerdos, #fecha, #cierre) {
+    isolation: isolate;
+  }
+  #invitacion .card::before {
+    z-index: var(--layer-pattern);
+    pointer-events: none;
+  }
+  #invitacion .card::after {
+    z-index: var(--layer-frame);
+    pointer-events: none;
+  }
+  #invitacion :is(#papas, #padrinos)::before {
+    content: none;
+  }
+  #invitacion .card > :is(h2, h3, p, a, form, .rsvp-intro, .swatches, .hotels, .venue, .icon),
+  #invitacion .company-card > :is(h2, p, .company-photo) {
+    position: relative;
+    z-index: var(--layer-content);
+  }
+  #invitacion .cover-photo,
+  #invitacion .cover-composition > :is(h1, p),
+  #invitacion #recuerdos :is(.photos, .eyebrow),
+  #invitacion #cierre :is(.name, .footer-number) {
+    z-index: var(--layer-content);
+  }
+  #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line, .gold-line) {
+    z-index: var(--layer-frame);
+  }
+  #invitacion :is(.card, .company-card, .cover-composition) {
+    overflow: visible;
+  }
+
+  /* 05 · Interacción, foco y movimiento reducido. */
+  .scroll-apolo #invitacion:focus-visible {
+    outline: 2px solid #ad169f;
+    outline-offset: -2px;
+  }
+  .scroll-apolo #invitacion:has(input:focus, textarea:focus, select:focus, button:focus, a:focus) {
+    scroll-snap-type: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-apolo #invitacion {
+      scroll-behavior: auto;
+      scroll-snap-type: none;
+    }
+  }
+  
+}

@@ -1,0 +1,92 @@
+/* La tipografía vive solo aquí; los seis valores proceden de datos.js. */
+@layer tipografia {
+  /* 01 · Respetar los cortes de línea escritos en datos.js. */
+  [data-field] {
+    white-space: pre-line;
+  }
+  /* 02 · Contrato común: fuente, altura e interlineado; sin excepciones por sección. */
+  [data-estilo] {
+    font-family: var(--tipo-fuente);
+    font-size: var(--tipo-altura);
+    line-height: var(--tipo-interlineado);
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+  /* 03 · Estilo 15: variables definidas en datos.js. */
+  [data-estilo="15"] {
+    --tipo-fuente: var(--fuente-15);
+    --tipo-altura: var(--altura-15);
+    --tipo-interlineado: var(--interlineado-15);
+  }
+  /* 04 · Estilo quince: variables definidas en datos.js. */
+  [data-estilo="quince"] {
+    --tipo-fuente: var(--fuente-quince);
+    --tipo-altura: var(--altura-quince);
+    --tipo-interlineado: var(--interlineado-quince);
+  }
+  /* 05 · Estilo marian: variables definidas en datos.js. */
+  [data-estilo="marian"] {
+    --tipo-fuente: var(--fuente-marian);
+    --tipo-altura: var(--altura-marian);
+    --tipo-interlineado: var(--interlineado-marian);
+  }
+  /* 06 · Estilo titulo: variables definidas en datos.js. */
+  [data-estilo="titulo"] {
+    --tipo-fuente: var(--fuente-titulo);
+    --tipo-altura: var(--altura-titulo);
+    --tipo-interlineado: var(--interlineado-titulo);
+  }
+  /* 07 · Estilo frase: variables definidas en datos.js. */
+  [data-estilo="frase"] {
+    --tipo-fuente: var(--fuente-frase);
+    --tipo-altura: var(--altura-frase);
+    --tipo-interlineado: var(--interlineado-frase);
+  }
+  /* 08 · Estilo texto: variables definidas en datos.js. */
+  [data-estilo="texto"] {
+    --tipo-fuente: var(--fuente-texto);
+    --tipo-altura: var(--altura-texto);
+    --tipo-interlineado: var(--interlineado-texto);
+  }
+  #recuerdos .eyebrow {
+    font-size: 32px;
+  }
+
+  #cierre .footer-number {
+    font-size: calc(var(--altura-15) * 4.3);
+  }
+
+  #cierre .name {
+    font-size: calc(var(--altura-marian) * 2.5);
+    transform: none;
+  }
+
+  #invitacion [data-estilo="15"] {
+    background: linear-gradient(
+      135deg,
+      #deba39 0%,
+      #e9cf5b 35%,
+      #f5e49a 48%,
+      #e9cf5b 62%,
+      #deba39 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 1;
+    text-shadow: none;
+  }
+
+  /* Sombra de ambos números */
+  #portada .cover-age,
+  #cierre .footer-number {
+    filter: drop-shadow(2px 3px 3px #79571945);
+  }
+
+  /* Sombra del título y de ambos nombres */
+  #portada .cover-title,
+  #portada .cover-name,
+  #cierre .name {
+    text-shadow: 2px 3px 5px #86117b45;
+  }
+}
