@@ -481,6 +481,28 @@
     left: 41%;
   }
 
+  @media (max-aspect-ratio: 3/4) {
+    #recuerdos .photos {
+      left: 32%;
+      width: 48%;
+    }
+    #recuerdos .eyebrow {
+      left: 16%;
+      top: 51.5%;
+      transform: translateY(-50%) rotate(180deg);
+    }
+    .scroll-apolo #recuerdos .photos-top-branch {
+      left: 64%;
+    }
+    #recuerdos .photos-bottom-branch {
+      left: 30%;
+      width: 52%;
+    }
+    #recuerdos .photos-bottom-flower {
+      left: 49%;
+    }
+  }
+
   /* 05 · Fecha: calendario, contador y frase inferior. */
   #fecha {
     position: relative;

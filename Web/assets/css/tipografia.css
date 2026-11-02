@@ -51,6 +51,11 @@
   #recuerdos .eyebrow {
     font-size: 32px;
   }
+  @media (max-aspect-ratio: 3/4) {
+    #recuerdos .eyebrow {
+      font-size: 7cqw;
+    }
+  }
 
   #cierre .footer-number {
     font-size: calc(var(--altura-15) * 4.3);
