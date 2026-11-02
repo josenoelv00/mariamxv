@@ -20,9 +20,9 @@ window.INVITACION_DATOS = {
       "¡Llegó el momento!",
       "Los XV años solo se viven una vez",
       "y la fiesta no está completa",
-      "si tú no estás ahí!"
+      "si tú no estás ahí"
     ],
-    "foto": "portada-marian.png"
+    "foto": "portada-marian.png" 
   },
   "familia": {
     "papas": {

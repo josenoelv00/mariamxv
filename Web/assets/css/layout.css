@@ -9,6 +9,7 @@
     display: none;
   }
   .scroll-apolo #invitacion {
+    --ancho-composicion: min(calc((100vw - 24px) * 1.12), 985.6px, 90svh);
     width: calc(100% - 24px);
     height: 100svh;
     overflow-x: hidden;
@@ -19,63 +20,20 @@
     scrollbar-width: none;
     padding-block: 0;
   }
-  .scroll-apolo #fecha.roomy-surface {
+  .scroll-apolo #fecha {
+    min-height: min(72svh, calc(var(--ancho-composicion) * 1.45));
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     aspect-ratio: auto;
   }
 
-  .scroll-apolo #fecha.roomy-surface > .countdown {
+  .scroll-apolo #fecha > .countdown {
     margin-block: 0;
   }
-  .scroll-apolo #fecha.roomy-surface > [hidden] {
+  .scroll-apolo #fecha > [hidden] {
     display: none;
   }
-  :is(#papas, #padrinos) .company-card {
-    isolation: isolate;
-    overflow: visible;
-  }
-  #invitacion
-    :is(
-      .cover-art,
-      .cover-ornament,
-      .company-flower,
-      .photos-top-branch,
-      .photos-bottom-branch,
-      .photos-bottom-flower,
-      .photos-right-flower,
-      .memory-flower,
-      .frame-crown,
-      .frame-bow,
-      .corner,
-      .ceremony-flowers,
-      .ceremony-leaves,
-      .ceremony-butterfly,
-      .reception-flower,
-      .reception-flowers,
-      .reception-branch,
-      .reception-butterfly,
-      .dress-flowers,
-      .dress-leaves,
-      .dress-top,
-      .gifts-branch,
-      .gifts-butterfly,
-      .gifts-garland,
-      .gifts-flower,
-      .lodging-flowers,
-      .lodging-side,
-      .lodging-butterfly,
-      .rsvp-left,
-      .rsvp-right,
-      .rsvp-bottom,
-      .closing-flower,
-      .closing-butterfly
-    ) {
-    z-index: var(--layer-ornament);
-    pointer-events: none;
-  }
-
   /* 02 · Pantalla → composición → tamaño común de las secciones. */
   .scroll-apolo .scroll-screen > * {
     flex-shrink: 0;
@@ -91,11 +49,10 @@
     scroll-snap-stop: always;
     isolation: isolate;
     position: relative;
-    overflow: clip;
-    overflow-clip-margin: 0;
+    overflow: visible;
   }
   .scroll-apolo .scroll-composition {
-    width: 112%;
+    width: var(--ancho-composicion);
     align-self: center;
     margin-inline: 0;
     container-type: inline-size;
@@ -111,7 +68,8 @@
   }
   .scroll-apolo #portada {
     width: 100%;
-    aspect-ratio: 0.82;
+    height: min(92svh, calc(var(--ancho-composicion) * 1.65));
+    aspect-ratio: auto;
     align-self: center;
     margin-inline: 0;
   }
@@ -149,6 +107,8 @@
     width: 78%;
   }
   .scroll-apolo #recuerdos {
+    height: min(calc(100svh - 12px), calc(var(--ancho-composicion) * 1.9));
+    aspect-ratio: auto;
     margin-block: 0;
     transform: none;
   }
@@ -165,7 +125,6 @@
     margin-bottom: 3cqw;
   }
   .scroll-apolo #confirmacion .rsvp-intro {
-    margin-bottom: 8cqw;
     width: 90%;
     margin: 0 auto 3cqw;
     grid-template-columns: 64% 28%;
@@ -178,89 +137,21 @@
   .scroll-apolo #confirmacion > .gold-line {
     margin-bottom: 3cqw;
   }
-  .scroll-apolo #confirmacion .rsvp-message-line {
-    display: block;
-    white-space: pre-line;
-    overflow-wrap: break-word;
-  }
   .scroll-apolo #details-title {
     text-align: center;
-    margin: 0 0 7cqw;
-    margin-bottom: 1.5cqw;
+    margin: 0 0 1.5cqw;
   }
-  .scroll-apolo .card.roomy-surface {
+  .scroll-apolo #invitacion .card {
+    min-height: min(78svh, calc(var(--ancho-composicion) * 1.5));
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .scroll-apolo .card.roomy-surface > :not(img):not(.ornate-top):not(.ornate-bottom) {
+  .scroll-apolo .card > :not(img):not(.ornate-top):not(.ornate-bottom) {
     flex-shrink: 0;
   }
-  .scroll-apolo .card.roomy-surface > .button {
+  .scroll-apolo .card > .button {
     align-self: center;
-  }
-
-  /* 04 · Capas: patrón de fondo → contenido → marco → ornamentos. */
-  #invitacion img[src*="ramo-flores-dorado.svg"],
-  #invitacion img[src*="rama-floral-horizontal.svg"],
-  #invitacion img[src*="ramo-delicado.svg"],
-  #invitacion img[src*="ramita-dos-flores.svg"],
-  #invitacion img[src*="rama-hojas-fina.svg"],
-  #invitacion img[src*="flor-dorada.svg"],
-  #invitacion img[src*="mariposa-dorada.svg"],
-  #invitacion img[src*="rama-hojas-dorada.svg"],
-  #invitacion img[src*="guirnalda-horizontal.svg"],
-  #invitacion img[src*="corona-dorada.png"],
-  #invitacion .cover-art {
-    z-index: 20;
-    pointer-events: none;
-    opacity: 1;
-  }
-  #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line) {
-    z-index: 20;
-    color: var(--ornament-gold);
-    pointer-events: none;
-  }
-  #invitacion :is(.ornate-top, .ornate-bottom) {
-    background-color: var(--ornament-gold);
-  }
-  :root {
-    --ornament-gold: #d29931;
-    --layer-pattern: 0;
-    --layer-content: 1;
-    --layer-frame: 2;
-    --layer-ornament: 20;
-  }
-  #invitacion :is(.card, .company-card, .cover-composition, #recuerdos, #fecha, #cierre) {
-    isolation: isolate;
-  }
-  #invitacion .card::before {
-    z-index: var(--layer-pattern);
-    pointer-events: none;
-  }
-  #invitacion .card::after {
-    z-index: var(--layer-frame);
-    pointer-events: none;
-  }
-  #invitacion :is(#papas, #padrinos)::before {
-    content: none;
-  }
-  #invitacion .card > :is(h2, h3, p, a, form, .rsvp-intro, .swatches, .hotels, .venue, .icon),
-  #invitacion .company-card > :is(h2, p, .company-photo) {
-    position: relative;
-    z-index: var(--layer-content);
-  }
-  #invitacion .cover-photo,
-  #invitacion .cover-composition > :is(h1, p),
-  #invitacion #recuerdos :is(.photos, .eyebrow),
-  #invitacion #cierre :is(.name, .footer-number) {
-    z-index: var(--layer-content);
-  }
-  #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line, .gold-line) {
-    z-index: var(--layer-frame);
-  }
-  #invitacion :is(.card, .company-card, .cover-composition) {
-    overflow: visible;
   }
 
   /* 05 · Interacción, foco y movimiento reducido. */

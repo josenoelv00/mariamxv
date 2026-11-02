@@ -17,7 +17,7 @@
     src: url("../fonts/Brittany.ttf") format("truetype");
     font-display: swap;
 
-  
+
   }
 
   /* 02 · Variables compartidas de color. */
@@ -107,19 +107,6 @@
   .eyebrow {
     text-transform: uppercase;
   }
-  .photos img {
-    width: calc((100% - 32px) / 3);
-    border: 8px solid var(--paper);
-    box-shadow: 0 8px 18px #9258791b;
-    transform: rotate(-6deg);
-  }
-  .photos img:nth-child(2) {
-    transform: rotate(4deg);
-    margin-top: 50px;
-  }
-  .photos img:nth-child(3) {
-    transform: rotate(-3deg);
-  }
   .date {
     text-align: center;
     padding: 50px 24px 65px;
@@ -189,11 +176,6 @@
     border-radius: 26px;
     margin: 0 auto 24px;
   }
-  .location:first-child .venue {
-    width: 60%;
-    max-height: 310px;
-    object-fit: cover;
-  }
   .time {
     margin: 14px 0;
   }
@@ -254,42 +236,13 @@
   .footer-number {
     color: #e8cf6a;
   }
-  .memory-layout {
-    display: grid;
-    grid-template-columns: 38% 1fr;
-    gap: 10%;
-    align-items: center;
-    min-height: 640px;
-  }
-  .photos {
-    align-items: center;
-    margin: 35px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    background: #fefdfb;
-    padding: 12px;
-    transform: rotate(-9deg);
-    box-shadow: 0 5px 20px #92587922;
-  }
-  .photos img,
-  .photos img:nth-child(2),
-  .photos img:nth-child(3) {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border: 0;
-    margin: 0;
-    transform: none;
-    box-shadow: none;
-  }
   .card {
     position: relative;
     isolation: isolate;
     background: var(--paper);
     border: 1px solid #e38bd4;
     border-radius: 32px;
-    margin: 0 auto 65px;
+    margin: 0 auto 70px;
     padding: 46px 45px;
     text-align: center;
     box-shadow:
@@ -297,18 +250,16 @@
       inset 0 0 0 12px #d6ae56;
     width: 68%;
     max-width: none;
-    margin-bottom: 70px;
   }
   .card:before {
     content: "";
     position: absolute;
     inset: 16px;
     border-radius: 22px;
-    background: url("../img/patron-floral.svg?gold=2") center/cover;
+    background: url("../img/patron-floral.svg?gold=2") center/100% 100%;
     opacity: 0.13;
     z-index: -1;
     pointer-events: none;
-    background-size: 100% 100%;
   }
 #fecha {
     border-bottom-color: transparent;

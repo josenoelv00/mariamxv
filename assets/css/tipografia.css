@@ -1,10 +1,20 @@
 /* La tipografía vive solo aquí; los seis valores proceden de datos.js. */
 @layer tipografia {
+  /* Una base común: CSS responde al viewport sin mediciones de JavaScript. */
+  #invitacion {
+    --unidad-tipografica: calc(var(--ancho-composicion) / 1000);
+    --altura-15: calc(var(--tamano-15) * var(--unidad-tipografica));
+    --altura-quince: calc(var(--tamano-quince) * var(--unidad-tipografica));
+    --altura-marian: calc(var(--tamano-marian) * var(--unidad-tipografica));
+    --altura-titulo: calc(var(--tamano-titulo) * var(--unidad-tipografica));
+    --altura-frase: calc(var(--tamano-frase) * var(--unidad-tipografica));
+    --altura-texto: calc(var(--tamano-texto) * var(--unidad-tipografica));
+  }
   /* 01 · Respetar los cortes de línea escritos en datos.js. */
   [data-field] {
     white-space: pre-line;
   }
-  /* 02 · Contrato común: fuente, altura e interlineado; sin excepciones por sección. */
+  /* 02 · Base común; las excepciones de portada, galería y cierre están al final. */
   [data-estilo] {
     font-family: var(--tipo-fuente);
     font-size: var(--tipo-altura);
@@ -48,13 +58,10 @@
     --tipo-altura: var(--altura-texto);
     --tipo-interlineado: var(--interlineado-texto);
   }
+
   #recuerdos .eyebrow {
-    font-size: 32px;
-  }
-  @media (max-aspect-ratio: 3/4) {
-    #recuerdos .eyebrow {
-      font-size: 7cqw;
-    }
+    font-size: calc(var(--altura-15) * 0.4);
+    white-space: nowrap;
   }
 
   #cierre .footer-number {

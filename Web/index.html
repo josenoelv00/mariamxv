@@ -1,353 +1,401 @@
 <!doctype html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-apolo">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffd9f0" />
     <title>Mis quince años · Marian</title>
-    <link rel="stylesheet" href="assets/css/base.css?v=63" />
-    <link rel="stylesheet" href="assets/css/secciones.css?v=65" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=61" />
-    <link rel="stylesheet" href="assets/css/tipografia.css?v=65" />
+    <link rel="stylesheet" href="assets/css/base.css?v=66" />
+    <link rel="stylesheet" href="assets/css/secciones.css?v=66" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=66" />
+    <link rel="stylesheet" href="assets/css/tipografia.css?v=66" />
     <script defer src="assets/js/datos-loader.js?v=61"></script>
-    <script defer src="assets/js/render.js?v=61"></script>
+    <script defer src="assets/js/render.js?v=66"></script>
     <script defer src="assets/js/confirmacion.js?v=61"></script>
     <script defer src="assets/js/contador.js?v=61"></script>
-    <script defer src="assets/js/scroll.js?v=61"></script>
-    <script defer src="assets/js/app.js?v=61"></script>
+    <script defer src="assets/js/navegacion.js?v=66"></script>
+    <script defer src="assets/js/app.js?v=66"></script>
   </head>
   <body>
     <a class="skip" href="#detalles" data-field="textos.irDetalles"></a>
     <p id="estado" role="status">Preparando la invitación…</p>
     <noscript>Activa JavaScript para ver la invitación y sus ubicaciones.</noscript>
-    <main id="invitacion" hidden>
+    <main id="invitacion" tabindex="0" aria-label="Invitación, desplazamiento por secciones" hidden>
       <!-- PORTADA -->
-      <section class="cover" id="portada" aria-labelledby="titulo">
-        <div class="cover-frame">
-          <div class="cover-composition">
-            <!-- Contenido HTML; los valores vienen de datos.js. -->
-            <img class="cover-photo" data-src="portada.foto" data-alt="portada.protagonista" />
-            <p class="cover-age" data-estilo="15" data-field="portada.edad"></p>
-            <h1
-              id="titulo"
-              class="cover-title"
-              data-estilo="quince"
-              data-field="portada.titulo"
-            ></h1>
-            <p class="cover-name" data-estilo="marian" data-field="portada.protagonista"></p>
-            <p
-              class="cover-message"
-              data-estilo="frase"
-              data-field="portada.introduccionLineas"
-            ></p>
-            <!-- Capa frontal de ornamentos. -->
-            <img
-              class="cover-art"
-              src="assets/img/portada-ornamentos.svg"
-              alt=""
-              aria-hidden="true"
-            />
-          </div>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section class="cover" id="portada" aria-labelledby="titulo">
+            <div class="cover-frame">
+              <div class="cover-composition">
+                <!-- Contenido HTML; los valores vienen de datos.js. -->
+                <img class="cover-photo" data-src="portada.foto" data-alt="portada.protagonista" />
+                <p class="cover-age" data-estilo="15" data-field="portada.edad"></p>
+                <h1
+                  id="titulo"
+                  class="cover-title"
+                  data-estilo="quince"
+                  data-field="portada.titulo"
+                ></h1>
+                <p class="cover-name" data-estilo="marian" data-field="portada.protagonista"></p>
+                <p
+                  class="cover-message"
+                  data-estilo="frase"
+                  data-field="portada.introduccionLineas"
+                ></p>
+                <!-- Capa frontal de ornamentos. -->
+                <img
+                  class="cover-art"
+                  src="assets/img/portada-ornamentos.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
 
       <!-- PAPÁS -->
-      <section id="papas" class="card company-section" data-aria="familia.papas.titulo">
-        <h2 data-estilo="titulo" class="company-heading" data-field="familia.papas.titulo"></h2>
-        <article class="company-card">
-          <span class="company-line company-line-top" aria-hidden="true">✧</span>
-          <span class="company-line company-line-bottom" aria-hidden="true">✧</span>
-          <img
-            class="company-photo"
-            data-src="familia.papas.foto"
-            data-alt="familia.papas.titulo"
-          />
-          <p data-field="familia.papas.nombres" data-estilo="texto"></p>
-          <img class="company-flower" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
-        </article>
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section id="papas" class="card company-section" data-aria="familia.papas.titulo">
+            <h2 data-estilo="titulo" class="company-heading" data-field="familia.papas.titulo"></h2>
+            <article class="company-card">
+              <span class="company-line company-line-top" aria-hidden="true">✧</span>
+              <span class="company-line company-line-bottom" aria-hidden="true">✧</span>
+              <img
+                class="company-photo"
+                data-src="familia.papas.foto"
+                data-alt="familia.papas.titulo"
+              />
+              <p data-field="familia.papas.nombres" data-estilo="texto"></p>
+              <img class="company-flower" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
+            </article>
+          </section>
+        </div>
+      </div>
 
       <!-- PADRINOS -->
-      <section id="padrinos" class="card company-section" data-aria="familia.padrinos.titulo">
-        <h2 data-estilo="titulo" class="company-heading" data-field="familia.padrinos.titulo"></h2>
-        <article class="company-card">
-          <span class="company-line company-line-top" aria-hidden="true">✧</span>
-          <span class="company-line company-line-bottom" aria-hidden="true">✧</span>
-          <img
-            class="company-photo"
-            data-src="familia.padrinos.foto"
-            data-alt="familia.padrinos.titulo"
-          />
-          <p data-field="familia.padrinos.nombres" data-estilo="texto"></p>
-          <img class="company-flower" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
-        </article>
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section id="padrinos" class="card company-section" data-aria="familia.padrinos.titulo">
+            <h2 data-estilo="titulo" class="company-heading" data-field="familia.padrinos.titulo"></h2>
+            <article class="company-card">
+              <span class="company-line company-line-top" aria-hidden="true">✧</span>
+              <span class="company-line company-line-bottom" aria-hidden="true">✧</span>
+              <img
+                class="company-photo"
+                data-src="familia.padrinos.foto"
+                data-alt="familia.padrinos.titulo"
+              />
+              <p data-field="familia.padrinos.nombres" data-estilo="texto"></p>
+              <img class="company-flower" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
+            </article>
+          </section>
+        </div>
+      </div>
 
       <!-- FOTOGRAFÍAS -->
-      <section class="memories" id="recuerdos" aria-label="Fotografías de Marian">
-        <p class="eyebrow" data-field="portada.titulo" data-estilo="quince"></p>
-          <div class="photos">
-            <img
-              data-src="fotografias.imagenes.0.archivo"
-              data-alt="fotografias.imagenes.0.descripcion"
-              loading="lazy"
-            />
-            <img
-              data-src="fotografias.imagenes.1.archivo"
-              data-alt="fotografias.imagenes.1.descripcion"
-              loading="lazy"
-            />
-            <img
-              data-src="fotografias.imagenes.2.archivo"
-              data-alt="fotografias.imagenes.2.descripcion"
-              loading="lazy"
-            />      
-          </div>
-        <img class="photos-top-branch" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
-        <img class="photos-bottom-branch" src="assets/img/guirnalda-horizontal.svg?gold=2" alt="" />
-        <img class="photos-bottom-flower" src="assets/img/flor-dorada.svg?gold=2" alt="" />
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section class="memories" id="recuerdos" aria-label="Fotografías de Marian">
+            <p class="eyebrow" data-field="portada.titulo" data-estilo="quince"></p>
+              <div class="photos">
+                <img
+                  data-src="fotografias.imagenes.0.archivo"
+                  data-alt="fotografias.imagenes.0.descripcion"
+                  loading="lazy"
+                />
+                <img
+                  data-src="fotografias.imagenes.1.archivo"
+                  data-alt="fotografias.imagenes.1.descripcion"
+                  loading="lazy"
+                />
+                <img
+                  data-src="fotografias.imagenes.2.archivo"
+                  data-alt="fotografias.imagenes.2.descripcion"
+                  loading="lazy"
+                />
+              </div>
+            <img class="photos-top-branch" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
+            <img class="photos-bottom-branch" src="assets/img/guirnalda-horizontal.svg?gold=2" alt="" />
+            <img class="photos-bottom-flower" src="assets/img/flor-dorada.svg?gold=2" alt="" />
+          </section>
+        </div>
+      </div>
 
       <!-- FECHA Y CUENTA REGRESIVA -->
-      <section id="fecha" class="date" aria-label="Fecha de la celebración">
-        <div class="date-row">
-          <p class="eyebrow" data-field="evento.diaSemana" data-estilo="texto"></p>
-          <div class="day-heart">
-            <svg viewBox="0 0 160 150" aria-hidden="true">
-              <path
-                d="M82 133C35 121 2 89 8 53C13 22 49 17 72 40C89 -2 143 4 153 43C164 80 111 107 91 146"
-                fill="none"
-                stroke="#dbaa20"
-                stroke-width="4"
-                stroke-linecap="round"
-              />
-            </svg>
-            <span class="date-number" data-field="evento.dia" data-estilo="texto"></span>
-          </div>
-          <p class="month" data-field="evento.mes" data-estilo="texto"></p>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section id="fecha" class="date" aria-label="Fecha de la celebración">
+            <div class="date-row">
+              <p class="eyebrow" data-field="evento.diaSemana" data-estilo="texto"></p>
+              <div class="day-heart">
+                <svg viewBox="0 0 160 150" aria-hidden="true">
+                  <path
+                    d="M82 133C35 121 2 89 8 53C13 22 49 17 72 40C89 -2 143 4 153 43C164 80 111 107 91 146"
+                    fill="none"
+                    stroke="#dbaa20"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span class="date-number" data-field="evento.dia" data-estilo="texto"></span>
+              </div>
+              <p class="month" data-field="evento.mes" data-estilo="texto"></p>
+            </div>
+            <p data-field="evento.anio" data-estilo="texto"></p>
+            <div class="gold-line"></div>
+            <p class="script" data-field="textos.faltan" data-estilo="titulo"></p>
+            <div id="contador" class="countdown" aria-label="Cuenta regresiva">
+              <span data-estilo="texto">
+                —
+                <small data-field="textos.dias" data-estilo="texto"></small>
+              </span>
+              <span data-estilo="texto">
+                —
+                <small data-field="textos.horas" data-estilo="texto"></small>
+              </span>
+              <span data-estilo="texto">
+                —
+                <small data-field="textos.minutos" data-estilo="texto"></small>
+              </span>
+              <span data-estilo="texto">
+                —
+                <small data-field="textos.segundos" data-estilo="texto"></small>
+              </span>
+            </div>
+            <p data-estilo="frase" class="date-message" data-field="evento.frase"></p>
+            <p
+              class="pending"
+              id="fecha-pendiente"
+              data-field="textos.fechaPendiente"
+              data-estilo="texto"
+            ></p>
+          </section>
         </div>
-        <p data-field="evento.anio" data-estilo="texto"></p>
-        <div class="gold-line"></div>
-        <p class="script" data-field="textos.faltan" data-estilo="titulo"></p>
-        <div id="contador" class="countdown" aria-label="Cuenta regresiva">
-          <span data-estilo="texto">
-            —
-            <small data-field="textos.dias" data-estilo="texto"></small>
-          </span>
-          <span data-estilo="texto">
-            —
-            <small data-field="textos.horas" data-estilo="texto"></small>
-          </span>
-          <span data-estilo="texto">
-            —
-            <small data-field="textos.minutos" data-estilo="texto"></small>
-          </span>
-          <span data-estilo="texto">
-            —
-            <small data-field="textos.segundos" data-estilo="texto"></small>
-          </span>
-        </div>
-        <p data-estilo="frase" class="date-message" data-field="evento.frase"></p>
-        <p
-          class="pending"
-          id="fecha-pendiente"
-          data-field="textos.fechaPendiente"
-          data-estilo="texto"
-        ></p>
-      </section>
+      </div>
       <!-- CEREMONIA -->
-      <h2
-        data-estilo="titulo"
-        class="section-title"
-        id="details-title"
-        data-field="textos.detalles"
-      ></h2>
-      <section id="detalles" class="card location ceremony" data-ubicacion="0">
-        <img class="corner" src="assets/img/ramo-delicado.svg?gold=2" alt="" loading="lazy" />
-        <h2 data-estilo="titulo" data-field="ubicaciones.0.titulo"></h2>
-        <img
-          class="venue"
-          data-src="ubicaciones.0.imagen"
-          data-alt="ubicaciones.0.nombre"
-          loading="lazy"
-        />
-        <p class="time" data-estilo="texto"></p>
-        <p class="description" data-estilo="frase" data-field="ubicaciones.0.descripcion"></p>
-        <p class="venue-name" data-estilo="texto" data-field="ubicaciones.0.nombre"></p>
-        <a class="button" data-estilo="texto" target="_blank" rel="noopener noreferrer"></a>
-        <img class="ceremony-flowers" src="assets/img/ramita-dos-flores.svg" alt="" />
-        <img class="ceremony-leaves" src="assets/img/ramo-delicado.svg" alt="" />
-        <img class="ceremony-butterfly" src="assets/img/mariposa-dorada.svg" alt="" />
-        <span class="ornate-top" aria-hidden="true">✧</span>
-        <span class="ornate-bottom" aria-hidden="true">✧</span>
-      </section>
+      <div class="scroll-screen scroll-screen-details">
+        <div class="scroll-composition">
+          <h2
+            data-estilo="titulo"
+            class="section-title"
+            id="details-title"
+            data-field="textos.detalles"
+          ></h2>
+          <section id="detalles" class="card location ceremony" data-ubicacion="0">
+            <img class="corner" src="assets/img/ramo-delicado.svg?gold=2" alt="" loading="lazy" />
+            <h2 data-estilo="titulo" data-field="ubicaciones.0.titulo"></h2>
+            <img
+              class="venue"
+              data-src="ubicaciones.0.imagen"
+              data-alt="ubicaciones.0.nombre"
+              loading="lazy"
+            />
+            <p class="time" data-estilo="texto"></p>
+            <p class="description" data-estilo="frase" data-field="ubicaciones.0.descripcion"></p>
+            <p class="venue-name" data-estilo="texto" data-field="ubicaciones.0.nombre"></p>
+            <a class="button" data-estilo="texto" target="_blank" rel="noopener noreferrer"></a>
+            <img class="ceremony-flowers" src="assets/img/ramita-dos-flores.svg" alt="" />
+            <img class="ceremony-leaves" src="assets/img/ramo-delicado.svg" alt="" />
+            <img class="ceremony-butterfly" src="assets/img/mariposa-dorada.svg" alt="" />
+            <span class="ornate-top" aria-hidden="true">✧</span>
+            <span class="ornate-bottom" aria-hidden="true">✧</span>
+          </section>
+        </div>
+      </div>
       <!-- RECEPCIÓN -->
-      <section id="recepcion" class="card location reception" data-ubicacion="1">
-        <img class="corner" src="assets/img/ramo-delicado.svg?gold=2" alt="" loading="lazy" />
-        <h2 data-estilo="titulo" data-field="ubicaciones.1.titulo"></h2>
-        <img
-          class="venue"
-          data-src="ubicaciones.1.imagen"
-          data-alt="ubicaciones.1.nombre"
-          loading="lazy"
-        />
-        <p class="time" data-estilo="texto"></p>
-        <p class="description" data-estilo="frase" data-field="ubicaciones.1.descripcion"></p>
-        <p class="venue-name" data-estilo="texto" data-field="ubicaciones.1.nombre"></p>
-        <a class="button" data-estilo="texto" target="_blank" rel="noopener noreferrer"></a>
-        <img class="reception-flower" src="assets/img/flor-dorada.svg" alt="" />
-        <img class="reception-flowers" src="assets/img/ramita-dos-flores.svg" alt="" />
-        <img class="reception-branch" src="assets/img/rama-floral-horizontal.svg" alt="" />
-        <img class="reception-butterfly" src="assets/img/mariposa-dorada.svg" alt="" />
-        <span class="ornate-top" aria-hidden="true">✧</span>
-        <span class="ornate-bottom" aria-hidden="true">✧</span>
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section id="recepcion" class="card location reception" data-ubicacion="1">
+            <img class="corner" src="assets/img/ramo-delicado.svg?gold=2" alt="" loading="lazy" />
+            <h2 data-estilo="titulo" data-field="ubicaciones.1.titulo"></h2>
+            <img
+              class="venue"
+              data-src="ubicaciones.1.imagen"
+              data-alt="ubicaciones.1.nombre"
+              loading="lazy"
+            />
+            <p class="time" data-estilo="texto"></p>
+            <p class="description" data-estilo="frase" data-field="ubicaciones.1.descripcion"></p>
+            <p class="venue-name" data-estilo="texto" data-field="ubicaciones.1.nombre"></p>
+            <a class="button" data-estilo="texto" target="_blank" rel="noopener noreferrer"></a>
+            <img class="reception-flower" src="assets/img/flor-dorada.svg" alt="" />
+            <img class="reception-flowers" src="assets/img/ramita-dos-flores.svg" alt="" />
+            <img class="reception-branch" src="assets/img/rama-floral-horizontal.svg" alt="" />
+            <img class="reception-butterfly" src="assets/img/mariposa-dorada.svg" alt="" />
+            <span class="ornate-top" aria-hidden="true">✧</span>
+            <span class="ornate-bottom" aria-hidden="true">✧</span>
+          </section>
+        </div>
+      </div>
       <!-- VESTIMENTA -->
-      <section class="card dress" id="vestimenta">
-        <img class="corner" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" loading="lazy" />
-        <h2 data-estilo="titulo" data-field="vestimenta.titulo"></h2>
-        <img
-          class="icon dress-icon"
-          data-src="vestimenta.imagen"
-          data-alt="vestimenta.descripcionImagen"
-          loading="lazy"
-        />
-        <p class="large" data-field="vestimenta.tipo" data-estilo="texto"></p>
-        <p data-field="vestimenta.nota" data-estilo="frase"></p>
-        <div class="swatches" id="colores"></div>
-        <img class="dress-flowers" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
-        <img class="dress-leaves" src="assets/img/rama-hojas-fina.svg?gold=2" alt="" />
-        <img class="dress-top" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
-        <span class="ornate-top" aria-hidden="true">✧</span>
-        <span class="ornate-bottom" aria-hidden="true">✧</span>
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section class="card dress" id="vestimenta">
+            <img class="corner" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" loading="lazy" />
+            <h2 data-estilo="titulo" data-field="vestimenta.titulo"></h2>
+            <img
+              class="icon dress-icon"
+              data-src="vestimenta.imagen"
+              data-alt="vestimenta.descripcionImagen"
+              loading="lazy"
+            />
+            <p class="large" data-field="vestimenta.tipo" data-estilo="texto"></p>
+            <p data-field="vestimenta.nota" data-estilo="frase"></p>
+            <div class="swatches" id="colores"></div>
+            <img class="dress-flowers" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
+            <img class="dress-leaves" src="assets/img/rama-hojas-fina.svg?gold=2" alt="" />
+            <img class="dress-top" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
+            <span class="ornate-top" aria-hidden="true">✧</span>
+            <span class="ornate-bottom" aria-hidden="true">✧</span>
+          </section>
+        </div>
+      </div>
 
       <!-- REGALOS -->
-      <section class="card gifts" id="sobres">
-        <h2 data-estilo="titulo" data-field="regalos.titulo"></h2>
-        <img class="icon" data-src="regalos.imagen" alt="" loading="lazy" />
-        <p data-estilo="frase" class="body-copy" data-field="regalos.texto"></p>
-        <img
-          class="corner right"
-          src="assets/img/mariposa-dorada.svg?gold=2"
-          alt=""
-          loading="lazy"
-        />
-        <img class="gifts-branch" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
-        <img class="gifts-butterfly" src="assets/img/mariposa-dorada.svg?gold=2" alt="" />
-        <img class="gifts-garland" src="assets/img/guirnalda-horizontal.svg?gold=2" alt="" />
-        <img class="gifts-flower" src="assets/img/flor-dorada.svg?gold=2" alt="" />
-        <span class="ornate-top" aria-hidden="true">✧</span>
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section class="card gifts" id="sobres">
+            <h2 data-estilo="titulo" data-field="regalos.titulo"></h2>
+            <img class="icon" data-src="regalos.imagen" alt="" loading="lazy" />
+            <p data-estilo="frase" class="body-copy" data-field="regalos.texto"></p>
+            <img
+              class="corner right"
+              src="assets/img/mariposa-dorada.svg?gold=2"
+              alt=""
+              loading="lazy"
+            />
+            <img class="gifts-branch" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
+            <img class="gifts-butterfly" src="assets/img/mariposa-dorada.svg?gold=2" alt="" />
+            <img class="gifts-garland" src="assets/img/guirnalda-horizontal.svg?gold=2" alt="" />
+            <img class="gifts-flower" src="assets/img/flor-dorada.svg?gold=2" alt="" />
+            <span class="ornate-top" aria-hidden="true">✧</span>
+          </section>
+        </div>
+      </div>
 
       <!-- HOSPEDAJE -->
-      <section class="card lodging" id="hospedaje">
-        <h2 data-estilo="titulo" data-field="textos.hospedaje"></h2>
-        <img class="icon" src="assets/img/icono-hotel.svg" alt="" loading="lazy" />
-        <div id="hoteles" class="hotels"></div>
-        <img class="lodging-flowers" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
-        <img class="lodging-side" src="assets/img/ramita-dos-flores.svg?gold=2" alt="" />
-        <img class="lodging-butterfly" src="assets/img/mariposa-dorada.svg?gold=2" alt="" />
-        <span class="ornate-top" aria-hidden="true">✧</span>
-        <span class="ornate-bottom" aria-hidden="true">✧</span>
-      </section>
-      <!-- CONFIRMACIÓN -->
-      <section class="card rsvp" id="confirmacion" aria-labelledby="rsvp-title">
-        <img
-          class="corner"
-          src="assets/img/rama-floral-horizontal.svg?gold=2"
-          alt=""
-          loading="lazy"
-        />
-        <span class="rsvp-top-line" aria-hidden="true">✧</span>
-        <h2 data-estilo="titulo" id="rsvp-title" data-field="confirmacion.titulo"></h2>
-        <div class="rsvp-intro">
-          <p data-estilo="frase" class="body-copy" data-field="confirmacion.mensaje"></p>
-          <img
-            class="icon confirm-icon"
-            src="assets/img/icono-confirmacion.svg"
-            alt=""
-            loading="lazy"
-          />
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section class="card lodging" id="hospedaje">
+            <h2 data-estilo="titulo" data-field="textos.hospedaje"></h2>
+            <img class="icon" src="assets/img/icono-hotel.svg" alt="" loading="lazy" />
+            <div id="hoteles" class="hotels"></div>
+            <img class="lodging-flowers" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
+            <img class="lodging-side" src="assets/img/ramita-dos-flores.svg?gold=2" alt="" />
+            <img class="lodging-butterfly" src="assets/img/mariposa-dorada.svg?gold=2" alt="" />
+            <span class="ornate-top" aria-hidden="true">✧</span>
+            <span class="ornate-bottom" aria-hidden="true">✧</span>
+          </section>
         </div>
-        <p id="pases" class="form-note" data-estilo="texto"></p>
-        <div class="gold-line"></div>
-        <form id="formulario-rsvp">
-          <label for="nombre" data-field="textos.nombreInvitado" data-estilo="texto"></label>
-          <input
-            id="nombre"
-            name="nombre"
-            autocomplete="name"
-            required
-            maxlength="160"
-            data-estilo="texto"
-          />
-          <fieldset>
-            <legend data-field="textos.asistencia" data-estilo="texto"></legend>
-            <label class="radio" data-estilo="texto">
-              <input type="radio" name="asistencia" value="si" required data-estilo="texto" />
-              <span data-field="textos.si"></span>
-            </label>
-            <label class="radio" data-estilo="texto">
-              <input type="radio" name="asistencia" value="no" data-estilo="texto" />
-              <span data-field="textos.no"></span>
-            </label>
-          </fieldset>
-          <div class="quantities">
-            <div>
-              <label for="adultos" data-field="textos.adultos" data-estilo="texto"></label>
-              <input
-                id="adultos"
-                name="adultos"
-                type="number"
-                min="1"
-                step="1"
-                required
-                data-estilo="texto"
+      </div>
+      <!-- CONFIRMACIÓN -->
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section class="card rsvp" id="confirmacion" aria-labelledby="rsvp-title">
+            <img
+              class="corner"
+              src="assets/img/rama-floral-horizontal.svg?gold=2"
+              alt=""
+              loading="lazy"
+            />
+            <span class="rsvp-top-line" aria-hidden="true">✧</span>
+            <h2 data-estilo="titulo" id="rsvp-title" data-field="confirmacion.titulo"></h2>
+            <div class="rsvp-intro">
+              <p data-estilo="frase" class="body-copy" data-field="confirmacion.mensaje"></p>
+              <img
+                class="icon confirm-icon"
+                src="assets/img/icono-confirmacion.svg"
+                alt=""
+                loading="lazy"
               />
             </div>
-            <div>
-              <label for="ninos" data-field="textos.ninos" data-estilo="texto"></label>
+            <p id="pases" class="form-note" data-estilo="texto"></p>
+            <div class="gold-line"></div>
+            <form id="formulario-rsvp">
+              <label for="nombre" data-field="textos.nombreInvitado" data-estilo="texto"></label>
               <input
-                id="ninos"
-                name="ninos"
-                type="number"
-                min="0"
-                step="1"
+                id="nombre"
+                name="nombre"
+                autocomplete="name"
                 required
+                maxlength="160"
                 data-estilo="texto"
               />
-            </div>
-          </div>
-          <button type="submit" class="button submit" data-estilo="texto">
-            Probar confirmación
-          </button>
-          <p class="form-note" id="rsvp-estado" role="status" data-estilo="texto">
-            Formulario de muestra. No se enviarán tus datos.
-          </p>
-        </form>
-        <img class="rsvp-left" src="assets/img/ramo-delicado.svg?gold=2" alt="" />
-        <img class="rsvp-right" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
-        <img class="rsvp-bottom" src="assets/img/ramita-dos-flores.svg?gold=2" alt="" />
-      </section>
+              <fieldset>
+                <legend data-field="textos.asistencia" data-estilo="texto"></legend>
+                <label class="radio" data-estilo="texto">
+                  <input type="radio" name="asistencia" value="si" required data-estilo="texto" />
+                  <span data-field="textos.si"></span>
+                </label>
+                <label class="radio" data-estilo="texto">
+                  <input type="radio" name="asistencia" value="no" data-estilo="texto" />
+                  <span data-field="textos.no"></span>
+                </label>
+              </fieldset>
+              <div class="quantities">
+                <div>
+                  <label for="adultos" data-field="textos.adultos" data-estilo="texto"></label>
+                  <input
+                    id="adultos"
+                    name="adultos"
+                    type="number"
+                    min="1"
+                    step="1"
+                    required
+                    data-estilo="texto"
+                  />
+                </div>
+                <div>
+                  <label for="ninos" data-field="textos.ninos" data-estilo="texto"></label>
+                  <input
+                    id="ninos"
+                    name="ninos"
+                    type="number"
+                    min="0"
+                    step="1"
+                    required
+                    data-estilo="texto"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="button submit" data-estilo="texto">
+                Probar confirmación
+              </button>
+              <p class="form-note" id="rsvp-estado" role="status" data-estilo="texto">
+                Formulario de muestra. No se enviarán tus datos.
+              </p>
+            </form>
+            <img class="rsvp-left" src="assets/img/ramo-delicado.svg?gold=2" alt="" />
+            <img class="rsvp-right" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
+            <img class="rsvp-bottom" src="assets/img/ramita-dos-flores.svg?gold=2" alt="" />
+          </section>
+        </div>
+      </div>
 
       <!-- CIERRE -->
-      <section id="cierre">
-        <div
-          data-estilo="15"
-          class="footer-number"
-          aria-hidden="true"
-          data-field="portada.edad"
-        ></div>
-        <p data-estilo="marian" class="name" data-field="portada.protagonista"></p>
-        <img
-          class="closing-butterfly"
-          src="assets/img/mariposa-dorada.svg?gold=2"
-          alt=""
-          loading="lazy"
-        />
-        <img class="closing-flower" src="assets/img/flor-dorada.svg?gold=2" alt="" loading="lazy" />
-      </section>
+      <div class="scroll-screen">
+        <div class="scroll-composition">
+          <section id="cierre">
+            <div
+              data-estilo="15"
+              class="footer-number"
+              aria-hidden="true"
+              data-field="portada.edad"
+            ></div>
+            <p data-estilo="marian" class="name" data-field="portada.protagonista"></p>
+            <img
+              class="closing-butterfly"
+              src="assets/img/mariposa-dorada.svg?gold=2"
+              alt=""
+              loading="lazy"
+            />
+            <img class="closing-flower" src="assets/img/flor-dorada.svg?gold=2" alt="" loading="lazy" />
+          </section>
+        </div>
+      </div>
     </main>
   </body>
 </html>

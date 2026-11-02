@@ -114,67 +114,67 @@
     transform: translateY(-80%) rotate(var(--angle));
     transform-origin: 0 100%;
   }
-  .cover-letter-0 {
+  .cover-letter:nth-child(1) {
     left: 3.7079968202344644%;
     top: 17.139682424367805%;
     --angle: -37.43702053964299deg;
   }
-  .cover-letter-1 {
+  .cover-letter:nth-child(2) {
     left: 7.378812239687374%;
     top: 15.693200491264372%;
     --angle: -31.602007020548097deg;
   }
-  .cover-letter-2 {
+  .cover-letter:nth-child(3) {
     left: 8.915218005644792%;
     top: 15.178538816551715%;
     --angle: -27.36898803651192deg;
   }
-  .cover-letter-3 {
+  .cover-letter:nth-child(4) {
     left: 12.361968458966544%;
     top: 14.252257880919538%;
     --angle: -19.322012373706393deg;
   }
-  .cover-letter-4 {
+  .cover-letter:nth-child(5) {
     left: 15.88603279591837%;
     top: 13.592801052873568%;
     --angle: -12.535997999925984deg;
   }
-  .cover-letter-5 {
+  .cover-letter:nth-child(6) {
     left: 19.501560428571434%;
     top: 13.186054803678154%;
     --angle: -7.488027359944263deg;
   }
-  .cover-letter-6 {
+  .cover-letter:nth-child(7) {
     left: 21.272309861398174%;
     top: 13.03523326045977%;
     --angle: -2.361002374767183deg;
   }
-  .cover-letter-7 {
+  .cover-letter:nth-child(8) {
     left: 25.017394087537987%;
     top: 12.955358790344826%;
     --angle: 4.047004467938984deg;
   }
-  .cover-letter-8 {
+  .cover-letter:nth-child(9) {
     left: 28.253344871906215%;
     top: 13.075281198390801%;
     --angle: 9.788978120036171deg;
   }
-  .cover-letter-9 {
+  .cover-letter:nth-child(10) {
     left: 32.313880759009976%;
     top: 13.475465578160911%;
     --angle: 17.6729886287855deg;
   }
-  .cover-letter-10 {
+  .cover-letter:nth-child(11) {
     left: 35.46391408640904%;
     top: 13.993633921379315%;
     --angle: 24.145990872560887deg;
   }
-  .cover-letter-11 {
+  .cover-letter:nth-child(12) {
     left: 38.877965380373425%;
     top: 14.796736458390795%;
     --angle: 31.001007461472778deg;
   }
-  .cover-letter-12 {
+  .cover-letter:nth-child(13) {
     left: 42.0831923122015%;
     top: 15.826990451034472%;
     --angle: 36.962006427437004deg;
@@ -260,7 +260,6 @@
     background: none;
     box-shadow: none;
     container-type: inline-size;
-    grid-template-rows: minmax(0, 1fr);
     gap: 3cqw;
     height: auto;
     display: block;
@@ -294,16 +293,6 @@
     color: #bd8828;
     text-align: center;
   }
-  #papas .company-photo {
-    width: 55%;
-    height: auto;
-    max-height: 100%;
-    aspect-ratio: 1684.84/1667.92;
-    object-fit: contain;
-    border-radius: 3.5cqw;
-    align-self: center;
-    justify-self: center;
-  }
   :is(#papas, #padrinos) > .company-heading {
     color: #bd8828;
     margin: 0 0 4cqw;
@@ -312,8 +301,6 @@
   :is(#papas, #padrinos) .company-card {
     position: relative;
     min-height: 0;
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    justify-items: center;
     border: 1px solid #e78cdf;
     border-color: #e56bdc;
     border-radius: 5cqw;
@@ -377,7 +364,7 @@
     bottom: 2.2cqw;
   }
 
-  /* En pantallas altas, la altura extra debe ocuparla también la tarjeta interior. */
+  /* Composición vertical: portada y fotografías familiares. */
   @media (max-aspect-ratio: 3/4) {
     #portada .cover-frame {
       inset: 6% 5% 7%;
@@ -409,12 +396,7 @@
     padding: 0;
     text-align: center;
   }
-#recuerdos .memory-layout {
-    display: contents;
-  }
-  #recuerdos .photos img,
-  #recuerdos .photos img:nth-child(2),
-  #recuerdos .photos img:nth-child(3) {
+  #recuerdos .photos img {
     width: 100%;
     height: 100%;
     min-height: 0;
@@ -426,7 +408,7 @@
     box-shadow: none;
   }
   #recuerdos .photos img:nth-child(3) {
-    object-position: center 20%;
+    object-position: center 0%;
   }
   .scroll-apolo #recuerdos {
     transform: none;
@@ -440,6 +422,7 @@
     padding: 1.5cqw;
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
+    align-items: center;
     gap: 1.3cqw;
     transform: rotate(-3.3deg);
     background: #fefdfb;
@@ -448,13 +431,13 @@
   }
   #recuerdos .eyebrow {
     position: absolute;
-    top: 43%;
+    top: 51.5%;
     margin: 0;
     writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
     color: #d226c6;
     text-shadow: 0.2cqw 0.2cqw 0.5cqw #9d477c44;
-    left: 27.2%;
+    left: 16%;
   }
   #recuerdos .photos-top-branch {
     position: absolute;
@@ -485,11 +468,6 @@
     #recuerdos .photos {
       left: 32%;
       width: 48%;
-    }
-    #recuerdos .eyebrow {
-      left: 16%;
-      top: 51.5%;
-      transform: translateY(-50%) rotate(180deg);
     }
     .scroll-apolo #recuerdos .photos-top-branch {
       left: 64%;
@@ -1105,4 +1083,112 @@
     height: auto;
     transform: rotate(-18deg);
   }
+
+  :is(#papas, #padrinos) .company-card {
+    isolation: isolate;
+    overflow: visible;
+  }
+  #invitacion
+    :is(
+      .cover-art,
+      .cover-ornament,
+      .company-flower,
+      .photos-top-branch,
+      .photos-bottom-branch,
+      .photos-bottom-flower,
+      .photos-right-flower,
+      .memory-flower,
+      .frame-crown,
+      .frame-bow,
+      .corner,
+      .ceremony-flowers,
+      .ceremony-leaves,
+      .ceremony-butterfly,
+      .reception-flower,
+      .reception-flowers,
+      .reception-branch,
+      .reception-butterfly,
+      .dress-flowers,
+      .dress-leaves,
+      .dress-top,
+      .gifts-branch,
+      .gifts-butterfly,
+      .gifts-garland,
+      .gifts-flower,
+      .lodging-flowers,
+      .lodging-side,
+      .lodging-butterfly,
+      .rsvp-left,
+      .rsvp-right,
+      .rsvp-bottom,
+      .closing-flower,
+      .closing-butterfly
+    ) {
+    z-index: var(--layer-ornament);
+    pointer-events: none;
+  }
+
+  /* 04 · Capas: patrón de fondo → contenido → marco → ornamentos. */
+  #invitacion img[src*="ramo-flores-dorado.svg"],
+  #invitacion img[src*="rama-floral-horizontal.svg"],
+  #invitacion img[src*="ramo-delicado.svg"],
+  #invitacion img[src*="ramita-dos-flores.svg"],
+  #invitacion img[src*="rama-hojas-fina.svg"],
+  #invitacion img[src*="flor-dorada.svg"],
+  #invitacion img[src*="mariposa-dorada.svg"],
+  #invitacion img[src*="rama-hojas-dorada.svg"],
+  #invitacion img[src*="guirnalda-horizontal.svg"],
+  #invitacion img[src*="corona-dorada.png"],
+  #invitacion .cover-art {
+    z-index: 20;
+    pointer-events: none;
+    opacity: 1;
+  }
+  #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line) {
+    z-index: 20;
+    color: var(--ornament-gold);
+    pointer-events: none;
+  }
+  #invitacion :is(.ornate-top, .ornate-bottom) {
+    background-color: var(--ornament-gold);
+  }
+  :root {
+    --ornament-gold: #d29931;
+    --layer-pattern: 0;
+    --layer-content: 1;
+    --layer-frame: 2;
+    --layer-ornament: 20;
+  }
+  #invitacion :is(.card, .company-card, .cover-composition, #recuerdos, #fecha, #cierre) {
+    isolation: isolate;
+  }
+  #invitacion .card::before {
+    z-index: var(--layer-pattern);
+    pointer-events: none;
+  }
+  #invitacion .card::after {
+    z-index: var(--layer-frame);
+    pointer-events: none;
+  }
+  #invitacion :is(#papas, #padrinos)::before {
+    content: none;
+  }
+  #invitacion .card > :is(h2, h3, p, a, form, .rsvp-intro, .swatches, .hotels, .venue, .icon),
+  #invitacion .company-card > :is(h2, p, .company-photo) {
+    position: relative;
+    z-index: var(--layer-content);
+  }
+  #invitacion .cover-photo,
+  #invitacion .cover-composition > :is(h1, p),
+  #invitacion #recuerdos :is(.photos, .eyebrow),
+  #invitacion #cierre :is(.name, .footer-number) {
+    z-index: var(--layer-content);
+  }
+  #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line, .gold-line) {
+    z-index: var(--layer-frame);
+  }
+  #invitacion :is(.card, .company-card, .cover-composition) {
+    overflow: visible;
+  }
+
 }

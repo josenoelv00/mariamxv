@@ -79,38 +79,20 @@
     title.setAttribute("aria-label", text);
     const letters = [...text.replace(/\s/g, "")];
     title.replaceChildren(
-      ...letters.map((letter, i) => {
+      ...letters.map((letter) => {
         const span = document.createElement("span");
         span.textContent = letter;
         span.setAttribute("aria-hidden", "true");
-        span.className =
-          "cover-letter cover-letter-" + Math.round((i * 12) / Math.max(1, letters.length - 1));
+        span.className = "cover-letter";
         return span;
       }),
     );
-    const message = document.querySelector("#confirmacion .rsvp-intro .body-copy");
-    const originalMessage = message.textContent;
-    const messageLines = Array.isArray(d.confirmacion.mensaje)
-      ? d.confirmacion.mensaje
-      : d.confirmacion.mensaje.split("\n");
-    const updateMessage = () => {
-      if (messageLines.length > 1) {
-        message.replaceChildren(
-          ...messageLines.map((text) => {
-            const line = document.createElement("span");
-            line.className = "rsvp-message-line";
-            line.textContent = text;
-            return line;
-          }),
-        );
-      } else message.textContent = originalMessage;
-    };
-    updateMessage();
-
     aplicarEstilos(d);
   }
   function aplicarEstilos(d) {
+    // Solo enlaza la configuración editable; CSS calcula los tamaños adaptables.
     for (const [tipo, estilo] of Object.entries(d.estilos)) {
+      document.documentElement.style.setProperty("--tamano-" + tipo, String(estilo.altura));
       document.documentElement.style.setProperty(
         "--fuente-" + tipo,
         JSON.stringify(estilo.fuente) + ", serif",
