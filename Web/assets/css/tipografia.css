@@ -59,6 +59,19 @@
     --tipo-interlineado: var(--interlineado-texto);
   }
 
+  /* El encabezado escala con su grupo, no con la pantalla exterior.
+     La base conserva las proporciones del diseño vertical aprobado. */
+  #portada .cover-heading .cover-age {
+    font-size: calc(var(--tamano-15) * 0.27cqw);
+  }
+  #portada .cover-heading .cover-title {
+    font-size: calc(var(--tamano-quince) * 0.27cqw);
+  }
+  #portada .cover-heading .cover-name {
+    font-size: calc(var(--tamano-marian) * 0.23cqw);
+  }
+
+
   #fecha .date-row [data-estilo="texto"] {
     font-size: calc(var(--altura-texto) * 1.7);
   }

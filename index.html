@@ -6,11 +6,11 @@
     <meta name="theme-color" content="#ffd9f0" />
     <title>Mis quince años · Marian</title>
     <link rel="stylesheet" href="assets/css/base.css?v=66" />
-    <link rel="stylesheet" href="assets/css/secciones.css?v=67" />
+    <link rel="stylesheet" href="assets/css/secciones.css?v=70" />
     <link rel="stylesheet" href="assets/css/layout.css?v=67" />
-    <link rel="stylesheet" href="assets/css/tipografia.css?v=67" />
-    <script defer src="assets/js/datos-loader.js?v=61"></script>
-    <script defer src="assets/js/render.js?v=66"></script>
+    <link rel="stylesheet" href="assets/css/tipografia.css?v=70" />
+    <script defer src="assets/js/datos-loader.js?v=68"></script>
+    <script defer src="assets/js/render.js?v=68"></script>
     <script defer src="assets/js/confirmacion.js?v=61"></script>
     <script defer src="assets/js/contador.js?v=61"></script>
     <script defer src="assets/js/navegacion.js?v=66"></script>
@@ -28,20 +28,26 @@
             <div class="cover-frame">
               <div class="cover-composition">
                 <!-- Contenido HTML; los valores vienen de datos.js. -->
-                <img class="cover-photo" data-src="portada.foto" data-alt="portada.protagonista" />
-                <p class="cover-age" data-estilo="15" data-field="portada.edad"></p>
-                <h1
-                  id="titulo"
-                  class="cover-title"
-                  data-estilo="quince"
-                  data-field="portada.titulo"
-                ></h1>
-                <p class="cover-name" data-estilo="marian" data-field="portada.protagonista"></p>
-                <p
-                  class="cover-message"
-                  data-estilo="frase"
-                  data-field="portada.introduccionLineas"
-                ></p>
+                <div class="cover-banner">
+                  <img class="cover-photo" data-src="portada.foto" data-alt="portada.protagonista" />
+                  <div class="cover-heading">
+                    <p class="cover-age" data-estilo="15" data-field="portada.edad"></p>
+                    <h1
+                      id="titulo"
+                      class="cover-title"
+                      data-estilo="quince"
+                      data-field="portada.titulo"
+                    ></h1>
+                    <p class="cover-name" data-estilo="marian" data-field="portada.protagonista"></p>
+                  </div>
+                </div>
+                <div class="cover-intro">
+                  <p
+                    class="cover-message"
+                    data-estilo="frase"
+                    data-field="portada.introduccionLineas"
+                  ></p>
+                </div>
                 <!-- Capa frontal de ornamentos. -->
                 <img
                   class="cover-art"
@@ -68,7 +74,7 @@
                 data-src="familia.papas.foto"
                 data-alt="familia.papas.titulo"
               />
-              <p data-field="familia.papas.nombres" data-estilo="texto"></p>
+              <p data-field="familia.papas.nombres" data-estilo="frase"></p>
               <img class="company-flower" src="assets/img/rama-floral-horizontal.svg?gold=2" alt="" />
             </article>
           </section>
@@ -88,7 +94,7 @@
                 data-src="familia.padrinos.foto"
                 data-alt="familia.padrinos.titulo"
               />
-              <p data-field="familia.padrinos.nombres" data-estilo="texto"></p>
+              <p data-field="familia.padrinos.nombres" data-estilo="frase"></p>
               <img class="company-flower" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
             </article>
           </section>
@@ -279,21 +285,6 @@
         </div>
       </div>
 
-      <!-- HOSPEDAJE -->
-      <div class="scroll-screen">
-        <div class="scroll-composition">
-          <section class="card lodging" id="hospedaje">
-            <h2 data-estilo="titulo" data-field="textos.hospedaje"></h2>
-            <img class="icon" src="assets/img/icono-hotel.svg" alt="" loading="lazy" />
-            <div id="hoteles" class="hotels"></div>
-            <img class="lodging-flowers" src="assets/img/ramo-flores-dorado.svg?gold=2" alt="" />
-            <img class="lodging-side" src="assets/img/ramita-dos-flores.svg?gold=2" alt="" />
-            <img class="lodging-butterfly" src="assets/img/mariposa-dorada.svg?gold=2" alt="" />
-            <span class="ornate-top" aria-hidden="true">✧</span>
-            <span class="ornate-bottom" aria-hidden="true">✧</span>
-          </section>
-        </div>
-      </div>
       <!-- CONFIRMACIÓN -->
       <div class="scroll-screen">
         <div class="scroll-composition">

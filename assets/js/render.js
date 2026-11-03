@@ -27,22 +27,6 @@
       link.textContent = d.textos.ubicacion;
       link.setAttribute("aria-label", d.textos.verUbicacion.replace("{nombre}", u.nombre));
     }
-    for (const hotel of d.hospedaje) {
-      const row = document.createElement("div"),
-        h = document.createElement("h3"),
-        a = document.createElement("a");
-      h.textContent = hotel.nombre;
-      h.dataset.estilo = "texto";
-      a.textContent = d.textos.ubicacion;
-      a.href = hotel.mapaUrl;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.className = "button";
-      a.dataset.estilo = "texto";
-      a.setAttribute("aria-label", d.textos.verUbicacion.replace("{nombre}", hotel.nombre));
-      row.append(h, a);
-      document.querySelector("#hoteles").append(row);
-    }
     for (const c of d.vestimenta.colores) {
       const span = document.createElement("span");
       span.className = "swatch";

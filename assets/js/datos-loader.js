@@ -8,8 +8,7 @@ window.Invitacion = {};
       !d.confirmacion ||
       !d.vestimenta ||
       !d.regalos ||
-      !Array.isArray(d.ubicaciones) ||
-      !Array.isArray(d.hospedaje)
+      !Array.isArray(d.ubicaciones)
     )
       throw new Error(d?.textos?.errorDatos || "Datos incompletos");
     if (d.invitado.pases != null && (!Number.isInteger(d.invitado.pases) || d.invitado.pases < 0))

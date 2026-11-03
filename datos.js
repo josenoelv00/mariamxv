@@ -5,9 +5,9 @@ window.INVITACION_DATOS = {
     "15": { "fuente": "Alice", "altura": 110, "interlineado": 1 },
     "quince": { "fuente": "Alice", "altura": 22, "interlineado": 1.1 },
     "marian": { "fuente": "Brittany", "altura": 72, "interlineado": 1.1 },
-    "titulo": { "fuente": "Brittany", "altura": 70, "interlineado": 1.15 },
-    "frase": { "fuente": "Alice", "altura": 33, "interlineado": 1 },
-    "texto": { "fuente": "serif", "altura": 28, "interlineado": 1.25 }
+    "titulo": { "fuente": "Brittany", "altura": 75, "interlineado": 1.15 },
+    "frase": { "fuente": "Alice", "altura": 35, "interlineado": 1 },
+    "texto": { "fuente": "serif", "altura": 31, "interlineado": 1.25 }
   },
   "tituloPagina": "Mis quince años · Marian",
   "idioma": "es-MX",
