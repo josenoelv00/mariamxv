@@ -82,7 +82,7 @@
     font-size: min(calc(var(--altura-texto) * 1.7), 5.6cqw);
   }
   #recuerdos .eyebrow {
-    font-size: calc(var(--altura-15) * 0.4);
+    font-size: calc(var(--altura-15) * 0.472);
     white-space: nowrap;
   }
 
