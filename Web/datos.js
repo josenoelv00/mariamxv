@@ -105,6 +105,10 @@ window.INVITACION_DATOS = {
       {
         "nombre": "Blanco",
         "valor": "#FFFFFF"
+      },
+      {
+        "nombre": "Morado",
+        "valor": "#800080"
       }
     ],
     "imagen": "icono-vestimenta.svg",
@@ -116,7 +120,9 @@ window.INVITACION_DATOS = {
       "Mi mayor deseo es que me acompañes en mis XV años.",
       "Si nace de tu corazón hacerme un presente,",
       "puedes optar por un obsequio tradicional",
-      "o una contribución en efectivo."
+      "o una contribución en efectivo,",
+      "según te sea más cómodo,",
+      "habra cofre para sobres si así lo eliges."
     ],
     "imagen": "icono-sobre.svg"
   },
