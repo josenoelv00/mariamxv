@@ -83,6 +83,8 @@
   }
   #recuerdos .eyebrow {
     font-size: calc(var(--altura-15) * 0.472);
+    letter-spacing: 0.03738em;
+    word-spacing: 0.26244em;
     white-space: nowrap;
   }
 
