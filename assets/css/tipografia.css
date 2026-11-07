@@ -12,8 +12,8 @@
   }
   @media (max-aspect-ratio: 3/4) {
     #invitacion {
-      --altura-frase: calc(var(--tamano-frase) * var(--unidad-tipografica) * 1.05);
-      --altura-texto: calc(var(--tamano-texto) * var(--unidad-tipografica) * 1.05);
+      --altura-frase: calc(var(--tamano-frase) * var(--unidad-tipografica) * 1.1025);
+      --altura-texto: calc(var(--tamano-texto) * var(--unidad-tipografica) * 1.1025);
     }
   }
   /* 01 · Respetar los cortes de línea escritos en datos.js. */
