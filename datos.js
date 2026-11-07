@@ -122,7 +122,8 @@ window.INVITACION_DATOS = {
       "puedes optar por un obsequio tradicional",
       "o una contribución en efectivo,",
       "según te sea más cómodo,",
-      "habra cofre para sobres si así lo eliges."
+      "habra cofre para sobres",
+"si así lo eliges."
     ],
     "imagen": "icono-sobre.svg"
   },
