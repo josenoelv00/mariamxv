@@ -76,6 +76,9 @@
 
   /* El encabezado escala con su grupo, no con la pantalla exterior.
      La base conserva las proporciones del diseño vertical aprobado. */
+  #portada [data-field="portada.introduccionTitulo"] {
+    font-family: Allura, cursive;
+  }
   #portada .cover-heading .cover-age {
     font-size: calc(var(--tamano-15) * 0.27cqw);
   }

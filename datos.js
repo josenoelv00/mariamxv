@@ -16,8 +16,8 @@ window.INVITACION_DATOS = {
     "titulo": "Mis quince años",
     "protagonista": "Marian",
     "edad": "15",
+    "introduccionTitulo": "¡Llegó el momento!",
     "introduccionLineas": [
-      "¡Llegó el momento!",
       "Los XV años solo se viven una vez",
       "y la fiesta no está completa",
       "si tú no estás ahí"

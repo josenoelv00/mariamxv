@@ -25,16 +25,8 @@
   }
   @font-face {
     font-family: Allura;
-    src: url("../fonts/Brittany.ttf") format("truetype");
-    font-display: swap;
-
-
-  }
-  @font-face {
-    font-family: Allura;
     src: url("../fonts/Allura-Regular.ttf") format("truetype");
     font-display: swap;
-    unicode-range: U+00B4, U+00C1, U+00C9, U+00CD, U+00D1, U+00D3, U+00DA, U+00DC, U+00E1, U+00E9, U+00ED, U+00F1, U+00F3, U+00FA, U+00FC, U+0300-036F;
   }
 
   /* 02 · Variables compartidas de color. */
