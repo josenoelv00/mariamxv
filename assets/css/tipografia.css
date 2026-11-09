@@ -59,7 +59,7 @@
     color: var(--ink);
   }
   :is(.ceremony, .reception) a.button {
-    color: #FFE5B9;
+    color: #F7EEDD;
   }
   /* 07 · Estilo frase: variables definidas en datos.js. */
   [data-estilo="frase"] {
