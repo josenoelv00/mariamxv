@@ -116,7 +116,7 @@
   #portada .cover-heading {
     container-type: inline-size;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     width: 50%;
     height: 35%;
@@ -428,8 +428,14 @@
     transform: none;
     box-shadow: none;
   }
+  #recuerdos .photos img:nth-child(2) {
+    object-position: center 0%;
+  }
   #recuerdos .photos img:nth-child(3) {
     object-position: center 0%;
+  }
+  #recuerdos .photos img:nth-child(4) {
+  object-position: center 0%;
   }
   .scroll-apolo #recuerdos {
     transform: none;
@@ -442,7 +448,7 @@
     margin: 0;
     padding: 1.5cqw;
     display: grid;
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(0, 1fr);
     align-items: center;
     gap: 1.3cqw;
     transform: rotate(-3.3deg);
@@ -1081,7 +1087,7 @@
     position: absolute;
     left: 10%;
     width: 80%;
-    top: 50%;
+    top: 35%;
     color: #d226c6;
     transform: scaleY(1.3);
     overflow-wrap: normal;

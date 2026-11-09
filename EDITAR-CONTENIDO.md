@@ -33,7 +33,7 @@ Las fotos variables se configuran una sola vez en datos.js. Los adornos pertenec
 
 `index.html` contiene las 11 secciones. Sus atributos data-field, data-src y data-alt enlazan contenido, imágenes y descripciones. JavaScript carga esos enlaces; no guarda otra copia de las frases. Los avisos de carga y JavaScript desactivado permanecen en HTML porque deben funcionar cuando los datos no cargan.
 
-Todos los archivos de la invitación están en `Web`: `index.html`, `datos.js` y la carpeta `assets`. Para verla localmente, abre `Web/index.html`.
+Todos los archivos de la invitación están en la carpeta principal: `index.html`, `datos.js` y la carpeta `assets`. Para verla localmente, abre `index.html`.
 
 El formulario de confirmación funciona en modo de prueba: valida los campos, pero no envía ni guarda respuestas. El horario de recepción se edita en `ubicaciones[1].hora`.
 

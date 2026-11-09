@@ -52,6 +52,15 @@
     --tipo-altura: var(--altura-titulo);
     --tipo-interlineado: var(--interlineado-titulo);
   }
+  [data-estilo="marian"],
+  [data-estilo="quince"],
+  [data-estilo="texto"],
+  [data-estilo="frase"] {
+    color: var(--ink);
+  }
+  :is(.ceremony, .reception) a.button {
+    color: #FFE5B9;
+  }
   /* 07 · Estilo frase: variables definidas en datos.js. */
   [data-estilo="frase"] {
     --tipo-fuente: var(--fuente-frase);

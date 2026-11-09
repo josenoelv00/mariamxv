@@ -19,7 +19,7 @@
                   .fil3 {fill:#d29931}
                   .fil5 {fill:#d29931;fill-rule:nonzero}
                   .fil1 {fill:#d29931;fill-rule:nonzero}
-                  .fil2 {fill:url(#id1)}
+                  .fil2 {fill:none;stroke:url(#id1);stroke-width:14.69;stroke-linejoin:miter}
                   .fil0 {fill:url(#id2)}
                   .fnt2 {font-weight:normal;font-size:123.24px;font-family:'Arial'}
                   .fnt3 {font-weight:normal;font-size:125.55px;font-family:'Arial'}
@@ -64,10 +64,7 @@
                 <g>
                   <g>
                     <g style="clip-path:url(#id0)"></g>
-                    <path
-                      class="fil2"
-                      d="M539.61 1360.01l2216.89 0c23.98,6.63 42.34,26.78 46.36,51.74l0 3217.43c-4.15,25.78 -23.62,46.44 -48.78,52.35l-2212.06 0c-28.43,-6.68 -49.6,-32.2 -49.6,-62.67l0 -3196.8c0,-29.6 19.98,-54.53 47.19,-62.05zm2233.89 29.38l-2251.72 0 0 3262.78 2251.72 0 0 -3262.78z"
-                    />
+                    <rect class="fil2" x="499.765" y="1367.355" width="2295.75" height="3306.83" />
                   </g>
                   <g>
                     <g></g>

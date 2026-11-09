@@ -2,7 +2,7 @@
 // Funciona abriendo index.html directamente y también en GitHub Pages.
 window.INVITACION_DATOS = {
   "estilos": {
-    "15": { "fuente": "Alice", "altura": 110, "interlineado": 1 },
+    "15": { "fuente": "GFS Didot", "altura": 110, "interlineado": 1 },
     "quince": { "fuente": "Alice", "altura": 22, "interlineado": 1.1 },
     "marian": { "fuente": "Brittany", "altura": 72, "interlineado": 1.1 },
     "titulo": { "fuente": "Brittany", "altura": 75, "interlineado": 1.15 },
@@ -55,6 +55,10 @@ window.INVITACION_DATOS = {
       {
         "archivo": "marian-03.jpg",
         "descripcion": "Fotografía 3 de Marian"
+      },
+      {
+        "archivo": "marian-04.jpg",
+        "descripcion": "Fotografía 4 de Marian"
       }
     ]
   },
@@ -79,7 +83,7 @@ window.INVITACION_DATOS = {
     {
       "titulo": "Recepción",
       "nombre": "Centro de Convenciones",
-      "hora": "20:00",
+      "hora": "19:00",
       "mapaUrl": "https://maps.app.goo.gl/hVikkhAvacAYZX6H9",
       "imagen": "centro-convenciones.jpg",
       "descripcion": [
@@ -96,7 +100,7 @@ window.INVITACION_DATOS = {
     "colores": [
       {
         "nombre": "Fucsia",
-        "valor": "#D226C6"
+        "valor": "#E073BD"
       },
       {
         "nombre": "Dorado",
