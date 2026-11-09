@@ -32,6 +32,7 @@
   /* 02 · Variables compartidas de color. */
   :root {
     --pink: #ffd9f0;
+    --transparencia-fondo-interior: 60%;
     --ink: #a43b64;
     --gold: #af781b;
     --paper: #fefdfb;
@@ -87,12 +88,20 @@
       19px/1.5 Alice,
       Georgia,
       serif;
-    background: linear-gradient(150deg, #fff0be 0%, #df70bd 38%, #ffe6b9 70%, #db66bc 100%);
+    background-color: #fbe6ee;
+    background-image: url("../img/fondo-acuarela-rosa.png");
+    background-position: center;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     min-height: 100vh;
   }
+  @media (orientation: portrait) {
+    body {
+      background-size: auto 100%;
+    }
+  }
   #invitacion {
-    background: #ffd9f0;
+    background: color-mix(in srgb, transparent var(--transparencia-fondo-interior), var(--pink));
     margin: 0 auto;
     border-radius: 0;
   }
