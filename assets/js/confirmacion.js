@@ -74,6 +74,17 @@
       form.dispatchEvent(new Event("change"));
     }
     button.textContent = config.confirmacionUrl ? datos.textos.confirmar : datos.textos.probar;
-    status.textContent = config.confirmacionUrl ? "" : datos.textos.demo;
+    const fecha = datos.confirmacion.fechaLimite;
+    const dia = new Date(fecha + "T00:00:00Z");
+    if (fecha && Number.isFinite(dia.getTime()) && dia.toISOString().slice(0, 10) === fecha) {
+      const plazo = document.querySelector("#rsvp-plazo");
+      const time = plazo.querySelector("time");
+      time.dateTime = fecha;
+      time.textContent = dia.toLocaleDateString(datos.idioma, {
+        dateStyle: "long",
+        timeZone: "UTC",
+      });
+      plazo.hidden = false;
+    }
   };
 })();

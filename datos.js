@@ -146,6 +146,7 @@ window.INVITACION_DATOS = {
     }
   ],
   "confirmacion": {
+    "fechaLimite": "2026-12-10",
     "mensaje": [
       "Tu lugar está reservado con mucho cariño.",
       "Para una mejor organización de nuestro evento,",
@@ -172,7 +173,7 @@ window.INVITACION_DATOS = {
     "segundos": "S",
     "fechaPendiente": "La cuenta regresiva estará disponible al confirmar el año.",
     "ubicacion": "Ubicación",
-    "nombreInvitado": "Nombre del invitado",
+    "nombreInvitado": "Nombre del invitado o familia",
     "asistencia": "¿Vas a asistir?",
     "si": "Sí, asistiré",
     "no": "No, lo siento",
@@ -180,7 +181,6 @@ window.INVITACION_DATOS = {
     "ninos": "Niños",
     "confirmar": "Confirmar asistencia",
     "probar": "Probar confirmación",
-    "demo": "Formulario de prueba. El envío aún no está conectado.",
     "enviando": "Enviando respuesta…",
     "validando": "Validando…",
     "pruebaCompleta": "Prueba completada. No se enviaron ni guardaron datos.",
