@@ -355,63 +355,61 @@
     padding: 0;
     text-align: center;
   }
-  #recuerdos .photos img {
+  #recuerdos .photos img,
+  #recuerdos .photos canvas {
+    position: absolute;
+    inset: 0;
     width: 100%;
+    max-width: none;
     height: 100%;
     min-height: 0;
-    object-fit: cover;
-    object-position: center;
     border: 0;
     margin: 0;
-    transform: none;
+    object-fit: cover;
+    object-position: center;
     box-shadow: none;
   }
-  #recuerdos .photos img:nth-child(2) {
-    object-position: center 0%;
+  .photos-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
-  #recuerdos .photos img:nth-child(3) {
-    object-position: center 0%;
-  }
-  #recuerdos .photos img:nth-child(4) {
-  object-position: center 0%;
+  #recuerdos .photos img[hidden] {
+    display: none;
   }
   .scroll-apolo #recuerdos {
+    --giro-marco: -3.3deg;
     transform: none;
   }
   #recuerdos .photos {
     position: absolute;
-    top: 16%;
-    width: 30%;
-    height: 71%;
-    margin: 0;
-    padding: 1.5cqw;
-    display: grid;
-    grid-auto-rows: minmax(0, 1fr);
-    align-items: center;
-    gap: 1.3cqw;
-    transform: rotate(-3.3deg);
-    background: #fefdfb;
-    box-shadow: none;
-    left: 34.3%;
+    top: 15%;
+    left: 20%;
+    width: 60%;
+    height: 70%;
+    overflow: hidden;
+    border: 1.5cqw solid #fefdfb;
+    transform: rotate(var(--giro-marco)) scale(1.20);
   }
   #recuerdos .eyebrow {
     position: absolute;
     top: 51.5%;
     margin: 0;
     writing-mode: vertical-rl;
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(calc(180deg + var(--giro-marco)));
     color: #d226c6;
-    text-shadow: 0.2cqw 0.2cqw 0.5cqw #9d477c44;
+    text-shadow: 0 0 0.06em #fff8f3, 0 0 0.13em #fff8f3, 0 0 0.18em #482234;
     left: 16%;
   }
   #recuerdos .photos-top-branch {
     position: absolute;
-    top: 3%;
-    width: 22%;
-    height: 15%;
+    top: -5%;
+    width: 40%;
+    height: 40%;
     object-fit: contain;
     transform: rotate(30deg);
-    left: 50%;
+    left: 60%;
   }
   #recuerdos .photos-bottom-branch {
     position: absolute;
@@ -428,14 +426,19 @@
     transform: rotate(-18deg);
     left: 41%;
   }
+  #recuerdos .photos-bottom-ornament {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: var(--layer-ornament);
+    transform-origin: 46.5% 87.5%;
+    translate: 0cqw 2cqw;
+    scale: 1.45;
+  }
 
   @media (max-aspect-ratio: 3/4) {
-    #recuerdos .photos {
-      left: 32%;
-      width: 48%;
-    }
-    .scroll-apolo #recuerdos .photos-top-branch {
-      left: 64%;
+    #recuerdos .photos-bottom-ornament {
+      transform-origin: 56% 87.5%;
     }
     #recuerdos .photos-bottom-branch {
       left: 30%;
@@ -1148,11 +1151,14 @@
   }
   #invitacion .cover-banner,
   #invitacion .cover-intro,
-  #invitacion #recuerdos :is(.photos, .eyebrow),
+  #invitacion #recuerdos .photos,
   #invitacion #cierre :is(.name, .footer-number) {
     z-index: var(--layer-content);
   }
   #invitacion :is(.ornate-top, .ornate-bottom, .rsvp-top-line, .gold-line) {
+    z-index: var(--layer-frame);
+  }
+  #invitacion #recuerdos .eyebrow {
     z-index: var(--layer-frame);
   }
   #invitacion :is(.card, .company-card, .cover-composition) {

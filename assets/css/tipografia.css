@@ -94,9 +94,9 @@
     font-size: min(calc(var(--altura-texto) * 1.7), 5.6cqw);
   }
   #recuerdos .eyebrow {
-    font-size: calc(var(--altura-15) * 0.472);
-    letter-spacing: 0.03738em;
-    word-spacing: 0.26244em;
+    font-size: calc(var(--altura-15) * 0.60);
+    letter-spacing: 0.12em;
+    word-spacing: 0.50em;
     white-space: nowrap;
   }
 
