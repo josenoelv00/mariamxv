@@ -32,7 +32,7 @@
   /* 02 · Variables compartidas de color. */
   :root {
     --pink: #ffd9f0;
-    --transparencia-fondo-interior: 60%;
+    --transparencia-fondo-interior: 50%;
     --ink: #a43b64;
     --gold: #af781b;
     --paper: #fefdfb;

@@ -35,8 +35,14 @@
                       id="titulo"
                       class="cover-title"
                       data-estilo="quince"
-                      data-field="portada.titulo"
-                    ></h1>
+                    >
+                      <svg class="cover-arc" viewBox="0 0 300 90" aria-hidden="true">
+                        <defs><path id="arco-portada" d="M 18 78 Q 150 -45 282 78" /></defs>
+                        <text fill="currentColor" text-anchor="middle">
+                          <textPath href="#arco-portada" startOffset="50%" textLength="286" lengthAdjust="spacing" data-field="portada.titulo"></textPath>
+                        </text>
+                      </svg>
+                    </h1>
                     <p class="cover-name" data-estilo="marian" data-field="portada.protagonista"></p>
                   </div>
                 </div>

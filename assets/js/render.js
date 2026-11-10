@@ -59,18 +59,7 @@
       .querySelectorAll("[data-aria]")
       .forEach((el) => el.setAttribute("aria-label", valor(el.dataset.aria) ?? ""));
     const title = document.querySelector("#titulo");
-    const text = d.portada.titulo.toLocaleUpperCase(d.idioma);
-    title.setAttribute("aria-label", text);
-    const letters = [...text.replace(/\s/g, "")];
-    title.replaceChildren(
-      ...letters.map((letter) => {
-        const span = document.createElement("span");
-        span.textContent = letter;
-        span.setAttribute("aria-hidden", "true");
-        span.className = "cover-letter";
-        return span;
-      }),
-    );
+    title.setAttribute("aria-label", d.portada.titulo);
     aplicarEstilos(d);
   }
   function aplicarEstilos(d) {
