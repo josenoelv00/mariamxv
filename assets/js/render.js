@@ -67,7 +67,7 @@
         fotos[actual].hidden = true;
         fotos[siguiente].hidden = false;
         actual = siguiente;
-      }, 3800);
+      }, 3100);
     }
   }
 

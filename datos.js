@@ -45,10 +45,6 @@ window.INVITACION_DATOS = {
   "fotografias": {
     "imagenes": [
       {
-        "archivo": "marian-01.jpg",
-        "descripcion": "Fotografía 1 de Marian"
-      },
-      {
         "archivo": "marian-02.jpg",
         "descripcion": "Fotografía 2 de Marian"
       },
